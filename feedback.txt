@@ -1,0 +1,38 @@
+Message: You're looking to explore courses beyond your own faculty or department!
+
+The good news is that you have 2 free elective courses (6 credits) that can be taken from any other faculty. This is a great opportunity to diversify your learning experience and gain knowledge in new areas.
+
+Just remember to check the prerequisites for each course, as well as the faculty website for availability, before enrolling. We want to ensure you have the best possible experience and take the right courses for your academic goals.
+
+So, go ahead and explore those courses!
+Feedback: Positive
+
+Message: You're interested in changing sections? That's definitely possible! You can fill out the petition form for a section change, but just make sure that the new section you want has available seats first. We wouldn't want you to go through the process only to find out there isn't space available. Is that something you'd like to explore further?
+Feedback: Positive
+
+Message: Hi there! I'd be happy to help you with your petition. To get started, it's best to reach out to our Registration Office for guidance on the process. They'll be able to provide you with more details and support throughout the petitioning process. Would you like me to guide you on how to contact them?
+Feedback: Positive
+
+Message: Sorry to hear that you missed your ethics seminar! Don't worry, though - there is a way to catch up. You can fill out the petition form to take another section. However, please note that if the last available section for this semester has already taken place, unfortunately, you'll need to retake it next semester. Would you like me to guide you through the petition process or help you explore other options?
+Feedback: Positive
+
+Message: Hi! It's great to hear from you! I'm your AI assistant at ABAC University. What brings you here today? Do you have any specific questions or topics in mind that you'd like to discuss? I'm all ears (or should I say, all text!) and happy to help with anything you need.
+Feedback: Positive
+
+Message: Hey there! VME stands for Vincent Mary School of Engineering at Auburn Montgomery University (ABAC). It's one of our esteemed schools that offers various engineering programs and courses. If you have any more questions about VME or ABAC in general, feel free to ask!
+Feedback: Positive
+
+Message: For free electives, you can take 2 courses (6 credits) from any faculty. Examples include GE1405 (Thai Language and Culture), GE2101 (World Civilization), and BG1301 (Business Law 1). Ensure to check prerequisites and course availability on the faculty website.
+Feedback: Positive
+
+Message: Hello! I'm ABAC University AI Assistant. I'm here to assist you with any questions or concerns you may have. As a responsible AI assistant, I want to assure you that your interactions and feedback are logged for internal purposes, such as improving our services and ensuring user satisfaction. This information is kept confidential and is not shared externally.
+Feedback: Positive
+
+Message: Hello! I'm happy to help you with your query about VME. The Vincent Mary School of Engineering (VME) at ABAC University has many excellent instructors. While it's subjective to determine who is the "best," I can suggest that you check out our faculty directory or course catalog to learn more about each professor's expertise and teaching style.
+
+If you're looking for recommendations, we have a number of highly-regarded professors in various departments within VME. However, without more specific information about your interests or areas of study, it's hard for me to make a recommendation. Would you like some suggestions based on our course offerings?
+Feedback: Positive
+
+Message: For free electives, you can take 2 courses (6 credits) from any faculty. Examples include GE1405 (Thai Language and Culture), GE2101 (World Civilization), and BG1301 (Business Law 1). Ensure to check prerequisites and course availability on the faculty website.
+Feedback: Positive
+

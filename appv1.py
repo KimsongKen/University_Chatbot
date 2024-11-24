@@ -6,21 +6,6 @@ import ollama
 from PIL import Image
 import requests  # Add this import
 from io import BytesIO
-import numpy as np
-from typing import List
-
-# Main Page Layout
-icon_path = "abac_logo.jpg"  # Replace with the path to your local image file
-
-col1, col2 = st.columns([1, 5])  # Adjust the ratio for spacing
-
-with col1:
-    st.image(icon_path, width=100)  # Adjust the width as needed
-
-with col2:
-    st.title("VME Chatbot")
-
-st.markdown("### Your AI-powered assistant for answering questions about ABAC")
 
 # Initialize session state
 if "messages" not in st.session_state:
@@ -52,37 +37,20 @@ def store_user_interaction(user_question, assistant_response):
     with open('interactions.txt', 'a') as f:
         f.write(f"User: {user_question}\nAssistant: {assistant_response}\n\n")
 
-# Base Embedding Class
-class BaseEmbeddingFunction:
-    def __init__(self, model_name: str = 'all-MiniLM-L6-v2'):
-        self.model = SentenceTransformer(model_name)
-
-    def create_embeddings(self, texts: List[str]) -> np.ndarray:
-        embeddings = self.model.encode(texts, convert_to_tensor=False)
-        return np.array(embeddings)
-
-# Initialize the embedding function
-embedding_function = BaseEmbeddingFunction()
-
-# Update load_and_combine_data to use the new embedding class
 @st.cache_data
 def load_and_combine_data(files):
-    """Load and combine data from multiple CSV files with proper encoding."""
+    """Load and combine data from multiple CSV files."""
     combined_data = []
     
     for file_path in files:
-        try:
-            df = pd.read_csv(file_path, encoding='utf-8')  # Attempt to read with UTF-8
-        except UnicodeDecodeError:
-            df = pd.read_csv(file_path, encoding='ISO-8859-1')  # Fallback to ISO-8859-1 if UTF-8 fails
+        df = pd.read_csv(file_path)
         combined_data.append(df)
     
     combined_df = pd.concat(combined_data, ignore_index=True)
     context_text = combined_df.apply(lambda row: ' | '.join(map(str, row)), axis=1).tolist()
-    context_embeddings = embedding_function.create_embeddings(context_text)  # Use the new embedding function
+    context_embeddings = st.session_state.model.encode(context_text)
     
     return combined_df, context_embeddings
-
 
 # File paths for the datasets
 file_paths = ['CE.csv', 'Arjans.csv', 'combined_faqs.csv']
@@ -104,76 +72,51 @@ def search_combined_context(query):
     return relevant_context
 
 def handle_special_queries(prompt):
-    """Handle general queries, course names, professor names, free electives, or ABAC map."""
-    
-    # General AI-related queries (make sure to handle non-course-specific questions first)
-    if "what are you" in prompt.lower() or "who are you" in prompt.lower():
-        response = "I'm an AI assistant for ABAC University, here to help you with any academic information or queries about the university. How can I assist you today?"
+    """Handle queries for all course names, professor names, free elective courses, or ABAC map."""
+    if "all course names" in prompt.lower():
+        if 'Course_Name' in st.session_state.data.columns:
+            course_names = st.session_state.data['Course_Name'].dropna().unique().tolist()
+            response = "Here are all the course names:\n" + "\n".join(course_names)
+        else:
+            response = "Sorry, I couldn't find the course names in the data."
         return response, None
 
-    # Course-related queries
-    if "course" in prompt.lower() or "subject" in prompt.lower():
-        if "all course names" in prompt.lower():
-            if 'Course_Name' in st.session_state.data.columns:
-                course_names = st.session_state.data['Course_Name'].dropna().unique().tolist()
-                response = "Here are all the course names:\n" + "\n".join(course_names)
-            else:
-                response = "Sorry, I couldn't find the course names in the data."
-            return response, None
-        elif "free elective" in prompt.lower():
-            response = ("For free electives, you can take 2 courses (6 credits) from any faculty. "
-                        "Examples include GE1405 (Thai Language and Culture), GE2101 (World Civilization), "
-                        "and BG1301 (Business Law 1). Ensure to check prerequisites and course availability "
-                        "on the faculty website.")
-            return response, None
+    elif "all professor names" in prompt.lower():
+        if 'Professor_Name' in st.session_state.data.columns:
+            professor_names = st.session_state.data['Professor_Name'].dropna().unique().tolist()
+            response = "Here are all the professor names:\n" + "\n".join(professor_names)
+        else:
+            response = "Sorry, I couldn't find the professor names in the data."
+        return response, None
 
-    # Professor-related queries
-    if "professor" in prompt.lower() or "instructor" in prompt.lower():
-        if "all professor names" in prompt.lower():
-            if 'Professor_Name' in st.session_state.data.columns:
-                professor_names = st.session_state.data['Professor_Name'].dropna().unique().tolist()
-                response = "Here are all the professor names:\n" + "\n".join(professor_names)
-            else:
-                response = "Sorry, I couldn't find the professor names in the data."
-            return response, None
+    elif "free elective" in prompt.lower():
+        response = ("For free electives, you can take 2 courses (6 credits) from any faculty. "
+                    "Examples include GE1405 (Thai Language and Culture), GE2101 (World Civilization), "
+                    "and BG1301 (Business Law 1). Ensure to check prerequisites and course availability "
+                    "on the faculty website.")
+        return response, None
 
-    # General ABAC questions (e.g., about the campus)
-    if "map of abac" in prompt.lower() or "campus" in prompt.lower():
+    elif "map of abac" in prompt.lower():
         response = "Here's the map of ABAC (Assumption University):"
-        image_url = "https://admissions.au.edu/wp-content/uploads/2020/10/SUVARNABHUMI-CAMPUS-MAP.jpg"
+        # Fetch the image from the website
+        image_url = "https://admissions.au.edu/wp-content/uploads/2020/10/SUVARNABHUMI-CAMPUS-MAP.jpg"  # Replace with the actual URL of the ABAC map
         try:
             image_response = requests.get(image_url)
-            image_response.raise_for_status()  
+            image_response.raise_for_status()  # Raise an exception for bad responses
             image = Image.open(BytesIO(image_response.content))
             return response, image
         except requests.RequestException as e:
             return f"I'm sorry, but I couldn't fetch the ABAC map image from the website. Error: {str(e)}", None
-    
-    # FAQ-based queries (from combined_faqs.csv)
-    if "faq" in prompt.lower() or "frequently asked questions" in prompt.lower() or "question" in prompt.lower():
-        if 'Question' in st.session_state.data.columns and 'Answer' in st.session_state.data.columns:
-            matching_faqs = st.session_state.data[
-                st.session_state.data['Question'].str.contains(prompt, case=False, na=False)
-            ]
-            if not matching_faqs.empty:
-                faq_answer = matching_faqs.iloc[0]['Answer']
-                response = f"Here's an answer from the FAQs:\n{faq_answer}"
-            else:
-                response = "Sorry, I couldn't find a relevant FAQ for your query."
-            return response, None
 
     return None, None
-
 
 def generate_response(prompt):
     """Generate a response based on the user's prompt."""
     with st.spinner("Generating response..."):
-        # Check for course or general ABAC queries first
         special_response, image = handle_special_queries(prompt)
         if special_response:
             return special_response, image
         
-        # If not a special query, search through the context embeddings
         relevant_context = search_combined_context(prompt)
         
         context = "\n".join([f"{msg['role']}: {msg['content']}" for msg in st.session_state.conversation_history])
@@ -185,16 +128,11 @@ def generate_response(prompt):
         
         Please provide a conversational response to the user's question, using the relevant data context."""
         
-        # Generate response with ollama
         llm_response = ollama.chat(model='llama3', messages=[
             {"role": "system", "content": "You are an AI assistant for ABAC university. Respond concisely and accurately."},
             {"role": "user", "content": focused_prompt}
         ])
         response = llm_response['message']['content']
-        
-        # Show preview of the response
-        st.markdown("### Preview of the Response:")
-        st.write(response)  # Display the generated response as a preview
         
         return response, None
 
@@ -277,7 +215,7 @@ common_questions = [
     "What is the Map of ABAC?",
     "What are the free elective courses?",
     "What do I do if I miss Ethic Seminar?",
-    "Do we have to register English or can we not take English courses?"
+    "Do we have to register English or can we not the English courses?"
 ]
 
 for question in common_questions:

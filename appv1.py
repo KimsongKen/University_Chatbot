@@ -1,237 +1,301 @@
 import os
 import streamlit as st
 import pandas as pd
+import numpy as np
 from sentence_transformers import SentenceTransformer, util
 import ollama
 from PIL import Image
-import requests  # Add this import
+import requests
 from io import BytesIO
+from typing import Tuple, Optional, List, Dict, Any
+import logging
+import chardet
 
-# Initialize session state
-if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "assistant", "content": "How can I help you?"}]
-if "data" not in st.session_state:
-    st.session_state.data = None
-if "context_embeddings" not in st.session_state:
-    st.session_state.context_embeddings = None
-if "model" not in st.session_state:
-    st.session_state.model = None
-if "conversation_history" not in st.session_state:
-    st.session_state.conversation_history = []
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    filename='app.log'
+)
+logger = logging.getLogger(__name__)
 
-# Load the Sentence Transformer model once
-@st.cache_resource
-def load_model():
-    return SentenceTransformer('all-MiniLM-L6-v2')
-
-st.session_state.model = load_model()
-
-def collect_feedback(message_index, feedback):
-    """Store feedback provided by users."""
-    with open('feedback.txt', 'a') as f:
-        message = st.session_state.messages[message_index]['content']
-        f.write(f"Message: {message}\nFeedback: {feedback}\n\n")
-
-def store_user_interaction(user_question, assistant_response):
-    """Store user questions and assistant responses."""
-    with open('interactions.txt', 'a') as f:
-        f.write(f"User: {user_question}\nAssistant: {assistant_response}\n\n")
-
-@st.cache_data
-def load_and_combine_data(files):
-    """Load and combine data from multiple CSV files."""
-    combined_data = []
+class EmbeddingModel:
+    """Handles text embeddings using SentenceTransformer."""
     
-    for file_path in files:
-        df = pd.read_csv(file_path)
-        combined_data.append(df)
+    def __init__(self, model_name: str = 'all-MiniLM-L6-v2'):
+        self.model = SentenceTransformer(model_name)
     
-    combined_df = pd.concat(combined_data, ignore_index=True)
-    context_text = combined_df.apply(lambda row: ' | '.join(map(str, row)), axis=1).tolist()
-    context_embeddings = st.session_state.model.encode(context_text)
+    def encode(self, texts: List[str]) -> np.ndarray:
+        """Encode texts into embeddings."""
+        return self.model.encode(texts, convert_to_tensor=True)
+
+class DataLoader:
+    """Handles data loading and preprocessing."""
     
-    return combined_df, context_embeddings
+    @staticmethod
+    def detect_encoding(file_path: str) -> str:
+        """Detect the encoding of a file."""
+        with open(file_path, 'rb') as file:
+            raw_data = file.read()
+            result = chardet.detect(raw_data)
+            return result['encoding']
 
-# File paths for the datasets
-file_paths = ['CE.csv', 'Arjans.csv', 'combined_faqs.csv']
-st.session_state.data, st.session_state.context_embeddings = load_and_combine_data(file_paths)
-
-st.sidebar.success("Data loaded and combined successfully from all files.")
-
-def search_combined_context(query):
-    """Search the combined context embeddings for the most relevant data."""
-    if st.session_state.data is None or st.session_state.context_embeddings is None:
-        return "I don't have any data loaded to answer your query.", None
-    
-    user_query_embedding = st.session_state.model.encode([query])
-    similarity_scores = util.pytorch_cos_sim(user_query_embedding, st.session_state.context_embeddings)
-    
-    most_similar_idx = int(similarity_scores.argmax())
-    relevant_context = st.session_state.data.iloc[most_similar_idx]
-    
-    return relevant_context
-
-def handle_special_queries(prompt):
-    """Handle queries for all course names, professor names, free elective courses, or ABAC map."""
-    if "all course names" in prompt.lower():
-        if 'Course_Name' in st.session_state.data.columns:
-            course_names = st.session_state.data['Course_Name'].dropna().unique().tolist()
-            response = "Here are all the course names:\n" + "\n".join(course_names)
-        else:
-            response = "Sorry, I couldn't find the course names in the data."
-        return response, None
-
-    elif "all professor names" in prompt.lower():
-        if 'Professor_Name' in st.session_state.data.columns:
-            professor_names = st.session_state.data['Professor_Name'].dropna().unique().tolist()
-            response = "Here are all the professor names:\n" + "\n".join(professor_names)
-        else:
-            response = "Sorry, I couldn't find the professor names in the data."
-        return response, None
-
-    elif "free elective" in prompt.lower():
-        response = ("For free electives, you can take 2 courses (6 credits) from any faculty. "
-                    "Examples include GE1405 (Thai Language and Culture), GE2101 (World Civilization), "
-                    "and BG1301 (Business Law 1). Ensure to check prerequisites and course availability "
-                    "on the faculty website.")
-        return response, None
-
-    elif "map of abac" in prompt.lower():
-        response = "Here's the map of ABAC (Assumption University):"
-        # Fetch the image from the website
-        image_url = "https://admissions.au.edu/wp-content/uploads/2020/10/SUVARNABHUMI-CAMPUS-MAP.jpg"  # Replace with the actual URL of the ABAC map
+    @staticmethod
+    def read_csv_safely(file_path: str) -> pd.DataFrame:
+        """Read CSV file with automatic encoding detection."""
         try:
-            image_response = requests.get(image_url)
-            image_response.raise_for_status()  # Raise an exception for bad responses
-            image = Image.open(BytesIO(image_response.content))
-            return response, image
-        except requests.RequestException as e:
-            return f"I'm sorry, but I couldn't fetch the ABAC map image from the website. Error: {str(e)}", None
+            encoding = DataLoader.detect_encoding(file_path)
+            return pd.read_csv(file_path, encoding=encoding)
+        except Exception as e:
+            logger.error(f"Error reading {file_path}: {e}")
+            raise
 
-    return None, None
+    @staticmethod
+    def clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+        """Clean and preprocess dataframe."""
+        df = df.replace(r'^\s*$', pd.NA, regex=True)
+        
+        # Handle missing values
+        for column in df.columns:
+            if df[column].dtype == 'object':
+                df[column] = df[column].fillna('N/A')
+            else:
+                df[column] = df[column].fillna(0)
+        
+        # Clean text columns
+        for column in df.select_dtypes(include=['object']).columns:
+            df[column] = df[column].astype(str).apply(
+                lambda x: x.encode('ascii', 'ignore').decode('ascii')
+            )
+        
+        return df
 
-def generate_response(prompt):
-    """Generate a response based on the user's prompt."""
-    with st.spinner("Generating response..."):
-        special_response, image = handle_special_queries(prompt)
-        if special_response:
-            return special_response, image
+    @staticmethod
+    @st.cache_data
+    def load_data(file_paths: List[str]) -> pd.DataFrame:
+        """Load and combine multiple CSV files."""
+        dataframes = []
+        for file_path in file_paths:
+            try:
+                df = DataLoader.read_csv_safely(file_path)
+                df = DataLoader.clean_dataframe(df)
+                dataframes.append(df)
+                st.sidebar.success(f"Loaded {file_path}")
+            except Exception as e:
+                st.sidebar.error(f"Failed to load {file_path}: {e}")
+                logger.error(f"Error loading {file_path}: {e}")
+                continue
         
-        relevant_context = search_combined_context(prompt)
+        if not dataframes:
+            raise ValueError("No data files were successfully loaded")
         
-        context = "\n".join([f"{msg['role']}: {msg['content']}" for msg in st.session_state.conversation_history])
-        context += f"\nRelevant context: {relevant_context}"
-        
-        focused_prompt = f"""Context: {context}
-        
-        User's question: {prompt}
-        
-        Please provide a conversational response to the user's question, using the relevant data context."""
-        
-        llm_response = ollama.chat(model='llama3', messages=[
-            {"role": "system", "content": "You are an AI assistant for ABAC university. Respond concisely and accurately."},
-            {"role": "user", "content": focused_prompt}
-        ])
-        response = llm_response['message']['content']
-        
-        return response, None
+        return pd.concat(dataframes, ignore_index=True)
 
-def safe_generate_response(prompt):
-    """Safely generate a response, handling any errors."""
-    try:
-        response, image = generate_response(prompt)
-        store_user_interaction(prompt, response)
-        return response, image
-    except Exception as e:
-        st.error(f"An error occurred: {str(e)}")
-        return "I apologize, but I encountered an error while processing your request. Please try again or contact support if the issue persists.", None
-
-def update_conversation_history(role, content):
-    """Update the conversation history with a new message."""
-    st.session_state.conversation_history.append({"role": role, "content": content})
-    if len(st.session_state.conversation_history) > 10:  # Keep the last 10 messages
-        st.session_state.conversation_history.pop(0)
-
-def display_feedback_buttons(message_index):
-    """Display feedback buttons for user interaction."""
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("👍", key=f"thumbs_up_{message_index}"):
-            collect_feedback(message_index, "Positive")
-            st.success("Thank you for your feedback!")
-    with col2:
-        if st.button("👎", key=f"thumbs_down_{message_index}"):
-            feedback = st.text_input("Please provide details on how we can improve:", key=f"feedback_{message_index}")
-            if st.button("Submit Feedback", key=f"submit_feedback_{message_index}"):
-                collect_feedback(message_index, feedback)
-                st.success("Thank you for your feedback!")
-
-def refresh_page():
-    """Refresh the page after each question."""
-    st.markdown('<script>window.location.reload();</script>', unsafe_allow_html=True)
-
-# Display chat messages
-st.markdown("### Conversation")
-for i, msg in enumerate(st.session_state.messages):
-    role = "🧑User" if msg["role"] == "user" else "🤖"
-    bg_color = "#011f4b" if msg["role"] == "user" else "#1c1c1c"
-    alignment = "right" if msg["role"] == "user" else "left"
+class ChatBot:
+    """Handles chat functionality and response generation."""
     
-    st.markdown(
-        f'<div style="background-color: {bg_color}; color: white; padding: 10px; border-radius: 10px; margin-bottom: 10px; max-width: 80%; float: {alignment};">'
-        f'{role}: {msg["content"]}</div>', 
-        unsafe_allow_html=True
-    )
+    def __init__(self, model: EmbeddingModel, data: pd.DataFrame):
+        self.model = model
+        self.data = data
+        self.context_embeddings = self._create_context_embeddings()
 
-    if msg["role"] == "assistant" and msg["content"] != "How can I help you?":
-        display_feedback_buttons(i)
+    def _create_context_embeddings(self) -> np.ndarray:
+        """Create embeddings for the context data."""
+        context_text = self.data.apply(
+            lambda row: ' | '.join(map(str, row)), axis=1
+        ).tolist()
+        return self.model.encode(context_text)
 
-    # Display image if it exists in the message
-    if "image" in msg:
-        st.image(msg["image"], caption="ABAC Map", use_column_width=True)
+    def find_relevant_context(self, query: str) -> pd.Series:
+        """Find the most relevant context for a query."""
+        query_embedding = self.model.encode([query])
+        similarity_scores = util.pytorch_cos_sim(query_embedding, self.context_embeddings)
+        most_similar_idx = int(similarity_scores.argmax())
+        return self.data.iloc[most_similar_idx]
 
-st.markdown('<div style="clear: both;"></div>', unsafe_allow_html=True)
-# Handle user input
-st.markdown("### Ask a Question")
-col1, col2 = st.columns([4, 1])
-with col1:
-    prompt = st.text_input("Your question:")
-with col2:
-    if st.button("Send", key="send_button"):
-        if prompt:
-            st.session_state.messages.append({"role": "user", "content": prompt})
+    def generate_response(self, query: str, conversation_history: List[Dict]) -> str:
+        """Generate a response using the LLM."""
+        try:
+            relevant_context = self.find_relevant_context(query)
+            context = self._format_context(conversation_history, relevant_context)
             
-            response, image = safe_generate_response(prompt)
-            message = {"role": "assistant", "content": response}
-            if image:
-                message["image"] = image
-            st.session_state.messages.append(message)
+            response = ollama.chat(
+                model='llama3',
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are an AI assistant for ABAC university. "
+                                 "Provide accurate and concise responses."
+                    },
+                    {
+                        "role": "user",
+                        "content": f"Context: {context}\n\nQuestion: {query}"
+                    }
+                ]
+            )
+            
+            return response['message']['content']
+        except Exception as e:
+            logger.error(f"Error generating response: {e}")
+            return f"I apologize, but I encountered an error: {str(e)}"
 
-            st.rerun()  # Add this to refresh the page after a new message is processed
+    def _format_context(self, history: List[Dict], relevant_context: pd.Series) -> str:
+        """Format conversation history and context for the prompt."""
+        history_text = "\n".join(
+            f"{msg['role']}: {msg['content']}" for msg in history[-5:]
+        )
+        return f"{history_text}\nRelevant information: {relevant_context.to_string()}"
 
-# Add common questions as clickable buttons
-st.markdown("### Common Questions")
-common_questions = [
-    "What is the Map of ABAC?",
-    "What are the free elective courses?",
-    "What do I do if I miss Ethic Seminar?",
-    "Do we have to register English or can we not the English courses?"
-]
+class UserInterface:
+    """Handles Streamlit interface elements."""
+    
+    @staticmethod
+    def display_messages(messages: List[Dict]):
+        """Display chat messages."""
+        st.markdown("### Chat History")
+        for i, msg in enumerate(messages):
+            UserInterface._display_message(msg, i)
 
-for question in common_questions:
-    if st.button(question):
-        prompt = question
-        if prompt:
-            st.session_state.messages.append({"role": "user", "content": prompt})
-            response, image = safe_generate_response(prompt)
-            message = {"role": "assistant", "content": response}
-            if image:
-                message["image"] = image
-            st.session_state.messages.append(message)
+    @staticmethod
+    def _display_message(msg: Dict, index: int):
+        """Display a single message with styling."""
+        is_user = msg["role"] == "user"
+        role_icon = "🧑" if is_user else "🤖"
+        bg_color = "#011f4b" if is_user else "#1c1c1c"
+        alignment = "right" if is_user else "left"
+        
+        st.markdown(
+            f'<div style="background-color: {bg_color}; color: white; '
+            f'padding: 10px; border-radius: 10px; margin-bottom: 10px; '
+            f'max-width: 80%; float: {alignment};">'
+            f'{role_icon}: {msg["content"]}</div>',
+            unsafe_allow_html=True
+        )
+        
+        if not is_user and msg["content"] != "How can I help you?":
+            UserInterface._display_feedback_buttons(index)
 
-            st.rerun()  # Add this to refresh the page after a new message is processed
- 
- #Clear Chat Button
-if st.sidebar.button("Clear Chat", key="clear_chat_button"):
-    st.session_state.messages = [{"role": "assistant", "content": "How can I help you?"}]
-    refresh_page()
+    @staticmethod
+    def _display_feedback_buttons(index: int):
+        """Display feedback buttons for a message."""
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("👍", key=f"thumbs_up_{index}"):
+                UserInterface._save_feedback(index, "Positive")
+        with col2:
+            if st.button("👎", key=f"thumbs_down_{index}"):
+                feedback = st.text_input(
+                    "How can we improve?",
+                    key=f"feedback_{index}"
+                )
+                if st.button("Submit", key=f"submit_{index}"):
+                    UserInterface._save_feedback(index, feedback)
+
+    @staticmethod
+    def _save_feedback(index: int, feedback: str):
+        """Save user feedback to file."""
+        try:
+            with open('feedback.txt', 'a') as f:
+                message = st.session_state.messages[index]['content']
+                f.write(f"Message: {message}\nFeedback: {feedback}\n\n")
+            st.success("Thank you for your feedback!")
+        except Exception as e:
+            logger.error(f"Error saving feedback: {e}")
+            st.error("Failed to save feedback")
+
+def initialize_session_state():
+    """Initialize Streamlit session state variables."""
+    if "messages" not in st.session_state:
+        st.session_state.messages = [
+            {"role": "assistant", "content": "How can I help you?"}
+        ]
+    if "conversation_history" not in st.session_state:
+        st.session_state.conversation_history = []
+
+def main():
+    """Main application function."""
+    st.title("ABAC University Assistant")
+    
+    # Initialize session state
+    initialize_session_state()
+    
+    try:
+        # Load data
+        file_paths = ['CE.csv', 'Arjans.csv', 'combined_faqs.csv']
+        data = DataLoader.load_data(file_paths)
+        
+        # Initialize models
+        embedding_model = EmbeddingModel()
+        chatbot = ChatBot(embedding_model, data)
+        
+        # Display chat interface
+        UserInterface.display_messages(st.session_state.messages)
+        
+        # Input area
+        st.markdown("### Ask a Question")
+        col1, col2 = st.columns([4, 1])
+        with col1:
+            user_input = st.text_input("Your question:")
+        with col2:
+            if st.button("Send") and user_input:
+                # Add user message
+                st.session_state.messages.append(
+                    {"role": "user", "content": user_input}
+                )
+                
+                # Generate and add response
+                response = chatbot.generate_response(
+                    user_input,
+                    st.session_state.conversation_history
+                )
+                st.session_state.messages.append(
+                    {"role": "assistant", "content": response}
+                )
+                
+                # Update conversation history
+                st.session_state.conversation_history.append(
+                    {"role": "user", "content": user_input}
+                )
+                st.session_state.conversation_history.append(
+                    {"role": "assistant", "content": response}
+                )
+                
+                st.rerun()
+        
+        # Common questions section
+        st.markdown("### Common Questions")
+        common_questions = [
+            "What is the Map of ABAC?",
+            "What are the free elective courses?",
+            "What do I do if I miss Ethics Seminar?",
+            "Do we have to register for English courses?"
+        ]
+        
+        for question in common_questions:
+            if st.button(question):
+                st.session_state.messages.append(
+                    {"role": "user", "content": question}
+                )
+                response = chatbot.generate_response(
+                    question,
+                    st.session_state.conversation_history
+                )
+                st.session_state.messages.append(
+                    {"role": "assistant", "content": response}
+                )
+                st.rerun()
+        
+        # Clear chat button
+        if st.sidebar.button("Clear Chat"):
+            st.session_state.messages = [
+                {"role": "assistant", "content": "How can I help you?"}
+            ]
+            st.session_state.conversation_history = []
+            st.rerun()
+            
+    except Exception as e:
+        logger.error(f"Application error: {e}")
+        st.error("An error occurred. Please try again or contact support.")
+
+if __name__ == "__main__":
+    main()

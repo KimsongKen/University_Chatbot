@@ -1,0 +1,475 @@
+Course_ID,Course_Code,Course_Name,Course_Description,Credit,Year,Semester,Is_Major_Elective
+1,BG 1001,English I,"Lower intermediate academic English, with activities to foster reading, writing, listening, and speaking skills in an academic context .",3,1,1,FALSE
+2,BG 1204,Calculus I,"Function, limits, continuity, differentiation, integration, introduction of numerical computation, surface integration, Fourier series .",3,1,1,FALSE
+3,BG 1211,Physics I,"Mechanics of particles and rigid bodies, properties of matter, fluid mechanics, heat, vibrations, and waves .",3,1,1,FALSE
+4,BG 1212,Physics Laboratory I,Experiments to be done according to BG 1211 Physics I .,1,1,1,FALSE
+5,BG 0008,General Chemistry Laboratory,Experiments to be done according to BG 1108 General Chemistry,1,1,1,FALSE
+6,BG 1108,General Chemistry,"Stoichiometry and basis of the atomic theory; properties of gas, liquid, solid and solution; chemical equilibrium; ionic equilibrium; chemical kinetic; electronic structures of atoms; chemical bonds; periodic properties; representative elements; nonmetal and transition metals.",3,1,1,FALSE
+7,ME 1113,Engineering Drawing,"Descriptive geometry, orthographic, isometric and oblique drawings, drawing of mechanical parts, detailed drawing and assembly drawings, allowable tolerance, and surface details, applied geometry, dimensions and notes, orthographic projections, working drawing, auxiliary views, true length, grade and bearings of a line, true shape of a plane surface, perspective, sectional and developed drawings.",3,1,1,FALSE
+8,ME 1114,Engineering Workshop,"Workshop on the use of the machine tools such as a lathe or milling machine, cutting tools, and drilling tools, for milling, cutting, drilling, and shaping metal materials. filing, grinding, and welding of metals. Carpentry is included. Students are required to make workpieces of metal and wood. A full report for each work is required.",2,1,1,FALSE
+9,BG 1002,English II,"Intermediate academic English, reinforcing fluency and grammar with task-driven oral and writing exercises, developing vocabulary and sentence writing skills with combined reading comprehension exercises and writing practice.",3,1,2,FALSE
+10,BG 1205,Calculus II,"Space vectors, matrices and determinants, linear analytic geometry, differential calculus of multivariable functions, vector analysis, linear integrals, surface integral and volume integrals.",3,1,2,FALSE
+11,BG 1213,Physics II,Elements of electromagnetism; alternating current (A. C.) circuits; fundamental electronics; optics; modern physics.,3,1,2,FALSE
+12,BG 1214,Physics Laboratory II,Experiments to be done according to BG 1213 Physics II,1,1,2,FALSE
+13,BG 1221,Computer Programming,"Computer concepts, hardware and software interaction, current programming language, programming practices .",3,1,2,FALSE
+14,IE 1110,Engineering Materials,"Study of relationship between structures, properties, production processes and applications of main groups of engineering materials i.e. metals, polymers, ceramics and composites, phase equilibrium diagrams and their interpretation, mechanical properties and materials degradation.",3,1,2,FALSE
+15,BG 2000,English III,"Advanced English for academic and career purposes, emphasizing organization of ideas and clarity of expression and understanding.",3,2,1,FALSE
+16,AE 2700,Fundamental Aircraft: Propulsion Theory,"Introduction to basic fundamental theory of aerospace propulsion system, background in the design and operation of different types of propulsion systems for aerospace applications to design, development, operation and maintenance of propulsion systems.",2,2,1,FALSE
+17,AE 2921,Problem-based Training in Aircraft Maintenance I,Skill training on the aeronautic engineering and training at the actual work site.,1,2,1,FALSE
+18,BG 2208,Discrete Mathematics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life.",3,2,1,FALSE
+19,EE 2201,Electric Circuits,"Circuit elements, node and mesh analysis, circuit theorems, resistance, inductance, and capacitance, first and second o der circuits, phasor diagram, AC power circuits, three- phase systems.",3,2,1,FALSE
+20,EE 2202,Electric Circuits Laboratory,Laboratory works to be done according to EE 2201 Electric Circuits.,1,2,1,FALSE
+21,MCE 2101,Fundamentals of Mechatronics,"Introduction to Mechatronics and the interaction between mechanical actuation and electronic control,
+early design evolution, evolution of engineering design, using of sensors in the system, case studies: simple
+subsystem integration; modern technologies, control, sensors, power supplies and controlled drives,
+Programmable Logic Control (PLC) as a controller for Mechatronics system, The need for a systems
+approach to Engineering Design, Control and Embedded Intelligence or PLC. ",3,2,1,FALSE
+22,MCE 2102,Fundamentals of Mechatronics Laboratory I,"Experiments covering basic sensors such as inductive, capacitive, magnetic, photoelectric and ultra sonic. Programmable Logic Controllers is introduced and experimental covering Ladder (LD), Structure Text (ST), Function Block Diagram (FBD) and Sequential Flow Chart (SFC) languages.",1,2,1,FALSE
+23,BG 2001,English IV,"Advanced English for academic and career purposes, emphasizing critical and analytical skills, and formulating logical and coherent opinions.",3,2,2,FALSE
+24,AE 2922,Problem-based Training in Aircraft Maintenance II,Skill training on the aeronautic engineering and training at the actual work site.,1,2,2,FALSE
+25,EE 2605,Engineering Electronics,"Semiconductor devices; current-voltage and frequency characteristics; analysis and design of diode circuits; analysis and design of BJT, MOS, CMOS and BiCMOS transistor circuits, operational amplifier and its applications, power supply module.",3,2,2,FALSE
+26,EE 2606,Engineering Electronics Laboratory,Laboratory works to be done according to EE 2605 Engineering Electronics.,1,2,2,FALSE
+27,GE 2202,Ethics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life.",3,2,2,FALSE
+28,ME 2211,Engineering Mechanics I,"Force systems, resultant, equilibrium, fluid statics, kinematics and kinetics of particles and rigid bodies, Newton’s second law of motion, work and energy, impulse and momentum.",3,2,2,FALSE
+29,AE 3310,Aircraft Maintenance: Maintenance Human Factor,"Factors that might cause damage in maintenance, theory of human behavior and proactive model including how to avoid accidents during maintaining aircraft and maintenance safety.",1,3,1,FALSE
+30,AE 3411,Aircraft System: Aviation Acts and Airworthiness Regulations,"Aviation Acts, Airworthiness Regulation. Laws which relate to maintenance and flight operation based on FAA and EASA.",3,3,1,FALSE
+31,AE 3710,Aircraft Maintenance: Aircraft Maintenance I,"Basic aircraft maintenance which concerns the importance, the meaning, the program of maintenance and the organization, and general regulations related to maintenance.",3,3,1,FALSE
+32,AE 3722,Fundamental Aircraft: Aerodynamics,"Basic knowledge of aviation, namely fluid dynamics, introduction to flight, flight dynamics, types of aircraft and behaviors of aircraft onboard.",2,3,1,FALSE
+33,AE 3723,Fundamental Aircraft: Aircraft Structure,"Basic aircraft structure both theory of basic structure and strength of material, including fatigues and components of airframe and joints.",3,3,1,FALSE
+34,AE 3724,Fundamental Aircraft: Aircraft Material,"Basic theory and basic knowledge of aircraft material, types of material especially composite material including the analysis of the problem and fixing.",3,3,1,FALSE
+35,AE 3921,Problem-based Training in Aircraft Maintenance III,Skill training on the aeronautic engineering and training on the actual work site. ,1,3,1,FALSE
+36,AE 3311,Aircraft System: Technical Document System,"Common and manufacturing aircraft manual, service letters, service bulletin and other issued documents, which are presented in terms of ATA system for working in maintenance.",3,3,2,FALSE
+37,AE 3312,Aircraft System: Logistics,"Logistics or maintenance and material support, how to supply the material or spare parts during conducting maintenance in order to avoid lack or not-in-time materials, systematic management based on basic logistics.",2,3,2,FALSE
+38,AE 3511,Aircraft System: Aircraft Communications,"Introduction to basic fundamental theory of communication technology, communication equipment and systems using in aviation, signal flow chart and how to understand the communication system",1,3,2,FALSE
+39,AE 3711,Aircraft Maintenance: Aircraft Maintenance II,"Relationship between the operation of flightand maintenance in airline or maintenance repair station, each part of section in maintenance organization, discussion of problems in maintenance management to understand the up-to-date situation in both local and global region.",3,3,2,FALSE
+40,AE 3712,Aircraft System: Hydraulic and Pneumatic System,"Basic fundamental theory of hydraulic and pneumatic power system and their applications in various aircraft systems, Pascal’s law in an opened and closed chamber and its application, different components consisting in a simple hydraulic system, functional principle of each component in hydraulic system. Students will learn to design a simple hydraulic system, read a flowchart diagram and perform maintenance on the system involving hydraulic system.",3,3,2,FALSE
+41,AE 3713,Aircraft System: Landing Gear and Brake System,"Basic functional principle of landing gear and brake system, how to service and maintain landing gear systems and related components including wheels, brakes, indication systems and warning systems.",3,3,2,FALSE
+42,AE 3725,Fundamental Aircraft: Aircraft Performance,"Fundamentals of propellers and jet aircraft performance, equation of motion, level flight,gliding, climbing including range and endurance based on FAA requirement.",3,3,2,FALSE
+43,AE 3922,Fundamental Aircraft: Practical Verification,Practice of the theoretical knowledge in “Fundamental Aircraft”. The practical assignment related to the topic is given.,1,3,2,FALSE
+44,AE 4721,Aircraft System: Fuel System,"Basic fundamental theory and functional principle of fuel system, how to safely service aircraft with correct rated fuel and theory towards the maintenance of aircraft airframe fuel systems, advises on aircraft fuel systems removal, repair, and installation maintenance procedures and policies, diagnoses fuel system and component malfunctions, recommendations of corrective actions and resolutions of problems using technical publications and analytic techniques.",3,4,1,FALSE
+45,AE 4722,Aircraft System: Powerplant,"Basic fundamental theory and functional principle of an aircraft power plant system, all the equipment which work together with the propulsion system, flowchart of power system which supports the aircraft power, functional principle of each part and how to perform maintenance on power plant system.",3,4,1,FALSE
+46,AE 4821,Aircraft System: Aircraft Electrical System,"Basic fundamental theory of aircraft electrical system technology, equipment and sources of electrical supply using in aviation, electrical flow chart and how to understand the communication",3,4,1,FALSE
+47,AE 4921,Aircraft Maintenance: Practical Verification,Practice of the theoretical knowledge in “Aircraft Maintenance Aircraft”. The practical assignment related to the topic is given.,1,4,1,FALSE
+48,BEN 3201,Innovation and Design Thinking,"Systematic approach to business innovation and creative problem solving that can be used in developing new products, new services and new organizations of business. Design thinking tools are introduced to have self-development to become innovative thinker and to uncover business opportunities.",3,4,1,FALSE
+49,AE 4621,Aircraft System: Ground Support Equipment,"Types of Ground Support Equipment (GSE) which are used to support during conducting maintenance, including how to handle and provide maintenance to GSE, units such as airline or maintenance company to be responsible for GSE.",2,4,2,FALSE
+50,AE 4622,Aircraft System: Non-Destructive Inspection,"Basic theory, current methods of Non-Destructive Inspection (NDI) used for aircraft structures, level of NDI, technique and tools.",3,4,2,FALSE
+51,AE 4723,Aircraft System: Stability and Weight & Balance System,"Stability of aircraft based on basic physics and flightdynamics, basic of Weight and Balance (W&B), including tools, schedule and method, discussion of importance and problems.",3,4,2,FALSE
+52,AE 4901,Aircraft System: Practical Verification,Practice of the theoretical knowledge in “Aircraft System Aircraft”. The practical assignment related to the topic is given.,1,4,2,FALSE
+53,BEN 3001,Entrepreneur and Innovation,An introduction to the concept and theory of entrepreneurship to understand the nature of entrepreneurship and the driving forces of new business success. Entrepreneurial design thinking process and business model development are introduced to develop an innovative and creative business model.,3,4,2,FALSE
+54,BG 1001,English I,"Lower intermediate academic English, with activities to foster reading, writing, listening, and speaking skills in an academic context .",3,1,1,FALSE
+55,BG 1204,Calculus I,"Function, limits, continuity, differentiation, integration, introduction of numerical computation, surface integration, Fourier series .",3,1,1,FALSE
+56,BG 1211,Physics I,"Mechanics of particles and rigid bodies, properties of matter, fluid mechanics, heat, vibrations, and waves .",3,1,1,FALSE
+57,BG 1212,Physics Laboratory I,Experiments to be done according to BG 1211 Physics I .,1,1,1,FALSE
+58,BG 1221,Computer Programming,"Computer concepts, hardware and software interaction, current programming language, programming practices .",3,1,1,FALSE
+59,ME 1112,Engineering Laboratory,"To get acquainted with simple machine tools, electrical wiring and transformer winding, practice of basic electrical measuring instruments and basic electrical devices assembly with circuit diagrams. A full report of each job is required.",2,1,1,FALSE
+60,ME 1113,Engineering Drawing,"Descriptive geometry, orthographic, isometric and oblique drawings, drawing of mechanical parts, detailed drawing and assembly drawings, allowable tolerance, and surface details, applied geometry, dimensions and notes, orthographic projections, working drawing, auxiliary views, true length, grade and bearings of a line, true shape of a plane surface, perspective, sectional and developed drawings.",3,1,1,FALSE
+61,BG 0008,General Chemistry Laboratory,Experiments to be done according to BG 1108 General Chemistry,1,1,2,FALSE
+62,BG 1108,General Chemistry,"Stoichiometry and basis of the atomic theory; properties of gas, liquid, solid and solution; chemical equilibrium; ionic equilibrium; chemical kinetic; electronic structures of atoms; chemical bonds; periodic properties; representative elements; nonmetal and transition metals.",3,1,2,FALSE
+63,BG 1002,English II,"Intermediate academic English, reinforcing fluency and grammar with task-driven oral and writing exercises, developing vocabulary and sentence writing skills with combined reading comprehension exercises and writing practice.",3,1,2,FALSE
+64,BG 1205,Calculus II,"Space vectors, matrices and determinants, linear analytic geometry, differential calculus of multivariable functions, vector analysis, linear integrals, surface integral and volume integrals.",3,1,2,FALSE
+65,BG 1213,Physics II,Elements of electromagnetism; alternating current (A. C.) circuits; fundamental electronics; optics; modern physics.,3,1,2,FALSE
+66,BG 1214,Physics Laboratory II,Experiments to be done according to BG 1213 Physics II,1,1,2,FALSE
+67,BG 2208,Discrete Mathematics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life.",3,1,2,FALSE
+68,IE 1110,Engineering Materials,"Study of relationship between structures, properties, production processes and applications of main groups of engineering materials i.e. metals, polymers, ceramics and composites, phase equilibrium diagrams and their interpretation, mechanical properties and materials degradation.",3,1,2,FALSE
+69,BG 2000,English III,"Advanced English for academic and career purposes, emphasizing organization of ideas and clarity of expression and understanding.",3,2,1,FALSE
+70,EE 2201,Electric Circuits,"Circuit elements, node and mesh analysis, circuit theorems, resistance, inductance, and capacitance, first and second o der circuits, phasor diagram, AC power circuits, three- phase systems.",3,2,1,FALSE
+71,EE 2202,Electric Circuits Laboratory,Laboratory works to be done according to EE 2201 Electric Circuits.,1,2,1,FALSE
+72,MCE 2101,Fundamentals of Mechatronics Engineering,"Introduction to Mechatronics and the interaction between mechanical actuation and electronic control,
+early design evolution, evolution of engineering design, using of sensors in the system, case studies: simple
+subsystem integration; modern technologies, control, sensors, power supplies and controlled drives,
+Programmable Logic Control (PLC) as a controller for Mechatronics system, The need for a systems
+approach to Engineering Design, Control and Embedded Intelligence or PLC. ",3,2,1,FALSE
+73,MCE 2102,Fundamentals of Mechatronics Engineering Laboratory I,"Experiments covering basic sensors such as inductive, capacitive, magnetic, photoelectric and ultra sonic. Programmable Logic Controllers is introduced and experimental covering Ladder (LD), Structure Text (ST), Function Block Diagram (FBD) and Sequential Flow Chart (SFC) languages.",1,2,1,FALSE
+74,MGT 1101,Introduction to Business,"General introduction to business, philosophy, objectives and responsibility of business enterprises, business vocabulary, business and its environment emphasizing fundamental principles of organization, legal forms of business ownership, business activities concerning personnel, accounting, marketing, production and finance",3,2,1,FALSE
+75,BG 2001,English IV,"Advanced English for academic and career purposes, emphasizing critical and analytical skills, and formulating logical and coherent opinions.",3,2,2,FALSE
+76,BG 2209,Statistics for Engineers,"Sets and probability, random variables, probability distribution, continuous and discrete models, parameters approximation, reliability range, hypothesis tests, regression and linear correlation.",3,2,2,FALSE
+77,GE 2101,World Civilization,"Development of human society, rise and fall of civilizations, achievements and heritages of Western and Eastern civilizations since ancient times in order to understand their roots; globalization impacts on modern societies; cross-cultural society.",3,2,2,FALSE
+78,EE 2605,Engineering Electronics,"Semiconductor devices; current-voltage and frequency characteristics; analysis and design of diode circuits; analysis and design of BJT, MOS, CMOS and BiCMOS transistor circuits, operational amplifier and its applications, power supply module.",3,2,2,FALSE
+79,EE 2606,Engineering Electronics Laboratory,Laboratory works to be done according to EE 2605 Engineering Electronics.,1,2,2,FALSE
+80,ME 2211,Engineering Mechanics I,"Force systems, resultant, equilibrium, fluid statics, kinematics and kinetics of particles and rigid bodies, Newton’s second law of motion, work and energy, impulse and momentum.",3,2,2,FALSE
+81,GE 1301,Environmental Science,"General science, scientificapproaches, understanding the interrelationships of the nature, identification and analysis of environmental problems, application and alternative solutions for preventing and solving the environmental problems.",3,2,3,FALSE
+82,AE 3302,Intermediate Flying: Flight Performance and Planning I,"Knowledge and principles to enable the pilot and future captain to check that an aircraft is correctly loaded and balanced for safe and efficientoperations which include theories required to operate an aircraft safely in all phases of flight:take-off, climb, cruise, descent and landing, as well as typical aircraft types.",3,3,1,FALSE
+83,AE 3304,Intermediate Flying: Meteorology,"All aspects of meteorology and its application to flightoperations, meteorology and weather forecasting which contribute greatly to flightsafety, how weather-related, in-flighthazards arise and how they should be predicted, avoided and or dealt with.",3,3,1,FALSE
+84,AE 3400,Intermediate Flying: Advanced Aerodynamics,Basic aerodynamic theory to transonic and supersonic flight to help professional pilots master the fundamental principles upon which flightdepends and which are essential to a full understanding of the flight characteristics of whichever aicraft they may operate.,3,3,1,FALSE
+85,AE 3501,Intermediate Flying: Power Plants and Instrumentations,"Engine design and engine operation considerations as well as recognition of engine malfunctions, flight instruments, warning and recording equipment and automatic flight contol systems.",3,3,1,FALSE
+86,AE 4300,Intermediate Flying: Crew Resources Management and Flight Safety,"Human error and reliability, error chain, error prevention and detection, organizational factors, company safety culture, stress and stress management, fatigue and vigilance, information acquisition and processing, situational awareness, workload management, aeronautical decision making, communication and coordination inside and outside the cockpit, leadership and team behavior synergy, automation and philosophy of the usage of automation, basic flightsafety concepts, theories of cause of accident, Human Factors Failure Analysis Classification System (H-ACS), and case study of both incident and accident.",1,3,1,FALSE
+87,AE 4301,Intermediate Flying: Human Performance and Limitations,Limitations of the human body operating in an aviation environment as well as dealing with all the aspects of the decision making process relevant to the pilot.,3,3,1,FALSE
+88,AE 1100,Core Flying: Single-Engine Flight - Ground,"Regulations, safety, pre-solo operations, cross-country planning, airspace, chart use, communications, weather, performance, weight and balance, aerodynamics, and decision-making.",3,3,2,FALSE
+89,AE 1101,Theory of Single-Engine Flight,"Pilot’s Operation Handbook (POH), Standard Operating Procedure (SOP), Checklist, Preflight Inspection, Entry/Leave Training Area, Pattern T/G, Taxi Check, NAV Check, Turn and Slip Check, Flight Control Check and Air Work, Brief Mission Card, METAR, TAF, Flight Plan, NOTAM before Flight",3,3,2,FALSE
+90,AE 1200,Core Flying: Single-Engine Flight - Flight,,2,3,2,FALSE
+91,AE 2100,Basic Flying: Single/Multi-Engine - Ground,"Instrument flyingregulations, safety, operations, navigation systems, chart use, weather, flightplanning, decision-making, and crew resource management.",3,3,2,FALSE
+92,AE 2200,Basic Flying: Single/Multi-Engine - Flight I,Fight practice to be done according to AE 2100 Basic Flying: Single/Multi-Engine -- Ground,1,3,2,FALSE
+93,AE 2201,Basic Flying: Single/Multi-Engine - Flight II,Training in maneuvers and procedures required for instrument flight test in order to be endorsed with instrument rating in pilot license.,1,3,2,FALSE
+94,AE 2202,Basic Flying: Multi-Engine Operations,"Multi-engine rating, multi-engine aerodynamics, maneuvers and procedures, engine-out operations, safety, operations, flight planning, and decision-makin",2,3,2,FALSE
+95,AE 3700,Commercial Flight I,"Continued training in the maneuvers and procedures necessary to meet the standards contained in the commercial pilot practical test standards, and training in cockpit resources management and safe flying practices.",3,3,3,FALSE
+96,AE 3705,Commercial Flight - Ground,"General knowledge of commercial flight:advanced aerodynamic, predicting performance, controlling weight and balance, emergency procedures, commercial decision making, maximum performance in takeoffs & landings, maximum performance in maneuver",3,3,3,FALSE
+97,AE 2203,Basic Flying: Operational Procedures,"Operational procedures related to the safe operations of flight,operational procedures prescribed in ICAO annex 6: Operation of Aircraft, national and international aviation law.",1,4,1,FALSE
+98,AE 2300,Basic Flying: Flight Communications,"Radio Telephony (RT) communications which lie at the base of procedural flyingin the professional aviation environment, standard phraseologies and terminologies used in international aviation environment.",1,4,1,FALSE
+99,AE 2401,Basic Flying: Air Law,"International air law, JAR-OPS1 and ICAO documents and annexes relevant to international conventions and agreements.",3,4,1,FALSE
+100,AE 3701,Commercial Flight II,"Continued training in the maneuvers and procedures necessary to meet the standards contained in the commercial pilot practical test standards, and training in cockpit resources management and safe flying practices.",1,4,1,FALSE
+101,AE 3702,Commercial Flight III,"Continued training in the maneuvers and procedures necessary to meet the standards contained in the commercial pilot practical test standards, and training in cockpit resources management and safe flying practices.",1,4,1,FALSE
+102,AE 3703,Commercial Flight IV,"Continued training in the maneuvers and procedures necessary to meet the standards contained in the commercial pilot practical test standards, and training in cockpit resources management and safe flying practices.",1,4,1,FALSE
+103,GE 2202,Ethics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life",3,4,2,FALSE
+104,AE 3300,Intermediate Flying: Route Manual and Pilot Applications,"Application of the rules and regulations stated in Route Manual for all phases of flight from pre-flight planning until landing of the aircraft which include pre-flightplanning, en-route charts, approach and landing charts, meteorological rules and regulations, operations and information.",3,4,2,FALSE
+105,AE 3301,Intermediate Flying: General Navigation,"All aspects of classical air navigation from basic pilot navigation to advanced plotting, use of flight
+computers, maps and related charts for navigation. ",3,4,2,FALSE
+106,AE 3303,Intermediate Flying: Flight Performance and Planning II,"Practical flightplanning instruction based upon aircraft such as the Boeing and Airbus, as well as aspects 
+of flight planning such as the weather facto.  ",3,4,2,FALSE
+107,AE 3500,Intermediate Flying: Airframes and Aircraft Systems,"Eight systems which comprise of the essential components of the modern aircraft, every part of the aircraft in details from the basic structure, hydraulic, fuel, air conditioning, anti-icing and flight-contol systems to the emergency equipment and landing gear.",3,4,2,FALSE
+108,AE 3502,Intermediate Flying: Radio Navigation,"Radio navigation facilities available for the navigation of aircraft during departure, en-route and approach, as well as the radar facilities used for the control of aircraft and for in-flightsafety, and the latest Global Navigation Satellite Systems (GNSS).",3,4,2,FALSE
+109,AE 3900,Seminar in International and Domestic Navigation,"Domestic and flightregulations and evaluation of their impacts on long-range domestic and international flights,use of ICAO operational requirements and typical air carrier Ops SPECS to plan domestic and international flights,high-altitude airspace, navigation, and approach procedure chart interpretation, concepts of MNPS and RVSM airspace, dispatch procedures, ETOPS, ETP, drift down, track messages, LRN accuracy checks, Oceanic Air TrafficControl clearances, international METARs and TAFs and emergencies and contingencies while on oceanic tracks, communication systems requirements and methodology which include satellite, digital, and analog devices.",3,4,2,FALSE
+110,ELE 1001,Communicative English I,,3,1,1,FALSE
+111,BG 1204,Calculus I,"Function, limits, continuity, differentiation, integration, introduction of numerical computation, surface integration, Fourier series .",3,1,1,FALSE
+112,BG 1211,Physics I,"Mechanics of particles and rigid bodies, properties of matter, fluid mechanics, heat, vibrations, and waves .",3,1,1,FALSE
+113,BG 1212,Physics Laboratory I,Experiments to be done according to BG 1211 Physics I .,1,1,1,FALSE
+114,BG 1221,Computer Programming,"Computer concepts, hardware and software interaction, current programming language, programming practices .",3,1,1,FALSE
+115,IE 1110,Engineering Materials,"Study of relationship between structures, properties, production processes and applications of main groups of engineering materials i.e. metals, polymers, ceramics and composites, phase equilibrium diagrams and their interpretation, mechanical properties and materials degradation.",3,1,1,FALSE
+116,ME 1114,Engineering Workshop,"Workshop on the use of the machine tools such as a lathe or milling machine, cutting tools, and drilling tools, for milling, cutting, drilling, and shaping metal materials. filing, grinding, and welding of metals. Carpentry is included. Students are required to make workpieces of metal and wood. A full report for each work is required.",1,1,1,FALSE
+117,GE 1410,Thai for Professional Communication (for Thai students),,2,1,1,FALSE
+118,GE 1411,Thai Language for Multicultural Communication (for non-Thai students),,2,1,1,FALSE
+119,GE 1412,Introductory Thai Usage (for Thai students from international program),,2,1,1,FALSE
+120,ELE 1002,Communicative English II,,3,1,2,FALSE
+121,BG 1205,Calculus II,"Space vectors, matrices and determinants, linear analytic geometry, differential calculus of multivariable functions, vector analysis, linear integrals, surface integral and volume integrals.",3,1,2,FALSE
+122,BG 1213,Physics II,Elements of electromagnetism; alternating current (A. C.) circuits; fundamental electronics; optics; modern physics.,3,1,2,FALSE
+123,BG 1214,Physics Laboratory II,Experiments to be done according to BG 1213 Physics II,1,1,2,FALSE
+124,ME 1113,Engineering Drawing,"Descriptive geometry, orthographic, isometric and oblique drawings, drawing of mechanical parts, detailed drawing and assembly drawings, allowable tolerance, and surface details, applied geometry, dimensions and notes, orthographic projections, working drawing, auxiliary views, true length, grade and bearings of a line, true shape of a plane surface, perspective, sectional and developed drawings.",3,1,2,FALSE
+125,ELE 2000,Academic English,,3,2,1,FALSE
+126,BBA 1004,Essential Marketing for Entrepreneurs,,2,2,1,FALSE
+127,BG 0008,General Chemistry Laboratory,Experiments to be done according to BG 1108 General Chemistry,1,2,1,FALSE
+128,BG 1108,General Chemistry,"Stoichiometry and basis of the atomic theory; properties of gas, liquid, solid and solution; chemical equilibrium; ionic equilibrium; chemical kinetic; electronic structures of atoms; chemical bonds; periodic properties; representative elements; nonmetal and transition metals.",3,2,1,FALSE
+129,EE 2207,Engineering Mathematics,,3,2,1,FALSE
+130,EE 2201,Electric Circuits,"Circuit elements, node and mesh analysis, circuit theorems, resistance, inductance, and capacitance, first and second o der circuits, phasor diagram, AC power circuits, three- phase systems.",3,2,1,FALSE
+131,EE 2202,Electric Circuits Laboratory,Laboratory works to be done according to EE 2201 Electric Circuits.,1,2,1,FALSE
+132,EE 2605,Engineering Electronics,"Semiconductor devices; current-voltage and frequency characteristics; analysis and design of diode circuits; analysis and design of BJT, MOS, CMOS and BiCMOS transistor circuits, operational amplifier and its applications, power supply module.",3,2,1,FALSE
+133,EE 2606,Engineering Electronics Laboratory,Laboratory works to be done according to EE 2605 Engineering Electronics.,1,2,1,FALSE
+134,ELE 2001,Advanced Academic English,,3,2,2,FALSE
+135,BBA 1005,Essential Finance for Entrepreneurs,,2,2,2,FALSE
+136,BG 2212,Applied Statistics,"Sets and probability, random variables, probability distribution, continuous and discrete models, parameters approximation, reliability range, hypothesis tests, regression and linear correlation.",1,2,2,FALSE
+137,CE 2704,Digital Logic Design," Number system; logic combination: logic systems and Boolean algebra, comparator; Karnaugh map, 
+tabulation method; combination logic circuit: adder, subtract, multiple output circuits, encoder, decoder, 
+multiplexer, demultiplexer, ROMD, sequential circuits: synchronous and asynchronous circuits, flip-flops
+ counter circuits, registers. ",3,2,2,FALSE
+138,CE 2705,Digital Logic Design Laboratory,"Experiments on the designs of Gate, digital and switching circuits; interconnection of logic modules, counter, control circuits, arithmetic units, memories and small computer circuits.",1,2,2,FALSE
+139,EE 2410,Electrical Machines System,Magnetic circuits; principles of electromechanical energy conversion; energy and coenergy in magnetic circuits; single phase and three phase transformers; principles of rotating machines; DC machines; AC machines construction; synchronous machines; single phase and three phase induction machines; protection of machines.,3,2,2,FALSE
+140,EE 2411,Electrical Machines System Laboratory,Laboratory works to be done according to EE 3402 Electrical Machines.,1,2,2,FALSE
+141,ME 2211,Engineering Mechanics I,"Force systems, resultant, equilibrium, fluidstatics, kinematics and kinetics of particles and rigid bodies, Newton’s second law of motion, work and energy, impulse and momentum.",3,2,2,FALSE
+142,BBA 1006,Essential Economics for Entrepreneurs,,2,3,1,FALSE
+143,CE 4224,Telecommunication Network Laboratory,"Setup and test LAN network (Ethernet), install and setup the Network Operating System, window NT, Novell NetWare, and UNIX, including network management system, network printer, filetransfer etc. Setup and operate Internet Server and Client.",1,3,1,FALSE
+144,EE 3301,Electromagnetic Fields,Electrostatic fields; conductors and dielectrics; capacitance; convection and conduction currents; magnetostatic fields; time-varying electomagnetic fields; Maxwell’s equations,3,3,1,FALSE
+145,EE 3310,"Signals, Systems, and Communications","Linear control systems, open-loop and closed loop automatic control system, fundamental equations, transfer functions, signal flowdiagram and zero plot, root locus method, bode diagram, Nichol chart, system stability, phase and gain margin, leading and lagging compensation, transient and steady –state analysis of the system.",3,3,1,FALSE
+146,EE 3606,Electrical Instruments and Measurements,"Units and standard of electrical measurement; instrument classificationand characteristics; measurement analysis; measurement of dc and ac current and voltage using analog and digital instruments; power, power factor, and energy measurement; the measurement of resistance, inductance, and capacitance; frequency and period/time - interval measurement; noises; transducers; calibration.",3,3,1,FALSE
+147,EE 3705,Microprocessors & Microcontrollers,"Fundamental of microprocessors and microcontrollers : architecture, hardware, software, and interfacing.",3,3,1,FALSE
+148,GE 2202,Ethics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life",3,3,1,FALSE
+149,BBA 1007,Data Analytics for Entrepreneurs,,3,3,2,FALSE
+150,EE 3406,Control Systems,"Fundamental concepts associated with the fieldof maritime robotics, maritime robots used for 
+oceanography, offshore exploitation and disaster response. study of vehicle design, mapping, path 
+planning, navigation, and collision avoidance. ",3,3,2,FALSE
+151,EE 4401,Electric Drive,"Development of electric drives, moment of electric drives, types of duties, electric braking, energy relation during starting and braking, calculation of motions of electric machines using analytical and graphical methods, calculations of motor ratings, important tracking machines, electric circuits and controls of traction machines, sample calculations, industrial applications of electric motors.",3,3,2,FALSE
+152,EE 4518,"Electrical Power Generation, Transmission and Distribution","Load curve, diesel power plant, steam power plant; gas turbine power plant, combined cycle power plant, hydro power plant, nuclear power plant, renewable energy sources, type of substation, substation equipment, substation layout, lightning protection, grounding system.",3,3,2,FALSE
+153,GE 1303,Science for Sustainable Future,"General science, scientificapproaches, understanding the interrelationships of the nature, identification and analysis of environmental problems, application and alternative solutions for preventing and solving the environmental problems.",2,3,2,FALSE
+154,GE 2110,Human Civilizations and Global Citizens,"Development of human society, rise and fall of civilizations, achievements and heritages of Western and Eastern civilizations since ancient times in order to understand their roots; globalization impacts on modern societies; cross-cultural society.",2,3,2,FALSE
+155,EE 4501,Power System Analysis,Transmission and distribution networks calculation; load flow; load flowcontrol; symmetrical short circuit analysis; unsymmetrical short circuit analysis; power system stability; economic operation.,3,4,1,FALSE
+156,EE 4503,Electrical Systems Design,"Basic design concepts, codes and standards, power distribution schemes, electrical wires and cables, raceways; electrical equipment and apparatus, load calculation, power factor improvement and capacitor bank circuit design, lighting and appliances circuit design, motor circuit design; load, feeder, and main schedule, emergency power system, short circuit calculation, grounding system for electrical installation.",3,4,1,FALSE
+157,EE 4506,High Voltage Engineering,"Uses of high voltage and over voltage in power systems; generation of high voltage for testing; high voltage measurement techniques; electric fieldstress and insulation techniques, breakdown of gas; liquid and solid dielectric; high voltage testing techniques; insulation coordination.",3,4,1,FALSE
+158,EE 4511,Renewable Energy,,3,4,1,FALSE
+159,EE 4901,Electrical and Computer Engineering Project I,,1,4,1,FALSE
+160,EE 4505,Power System Protection,Fundamental of protection practices; instrument transformer and transducers; protection devices and protection systems; overcurrent and earth fault protection; differential protection; transmission line protection by distance relaying; transmission line protection by pilot relaying; motor protection; transformer protection; generator protection; bus zone protection; introduction to digital protection devices.,3,4,2,FALSE
+161,EE 4512,Smart Grid,,3,4,2,FALSE
+162,EE 4705,Power Electronics,"Characteristics of power electronics devices, power diode, thyristors, power bipolar; MOSFET, IGBT, characteristics of magnetic material, power transformer core, ferrite core, iron powder core, converters, ac to dc converter, dc to dc converter, ac to ac converter, dc to ac converter.",3,4,2,FALSE
+163,EE 4706,Power Electronics Laboratory,Experiments to be done according to EE 4705 Power Electronics,1,4,2,FALSE
+164,EE 4902,Electrical and Computer Engineering Project II,,2,4,2,FALSE
+165,ELE 1001,Communicative English I,,3,1,1,FALSE
+166,BG 1204,Calculus I,"Function, limits, continuity, differentiation, integration, introduction of numerical computation, surface integration, Fourier series .",3,1,1,FALSE
+167,BG 1211,Physics I,"Mechanics of particles and rigid bodies, properties of matter, fluid mechanics, heat, vibrations, and waves .",3,1,1,FALSE
+168,BG 1212,Physics Laboratory I,Experiments to be done according to BG 1211 Physics I .,1,1,1,FALSE
+169,BG 1221,Computer Programming,"Computer concepts, hardware and software interaction, current programming language, programming practices .",3,1,1,FALSE
+170,BG 2208,Discrete Mathematics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life.",3,1,1,FALSE
+171,ME 1114,Engineering Workshop,"Workshop on the use of the machine tools such as a lathe or milling machine, cutting tools, and drilling tools, for milling, cutting, drilling, and shaping metal materials. filing, grinding, and welding of metals. Carpentry is included. Students are required to make workpieces of metal and wood. A full report for each work is required.",1,1,1,FALSE
+172,GE 1410,Thai for Professional Communication (for Thai students),,2,1,1,FALSE
+173,GE 1411,Thai Language for Multicultural Communication (for non-Thai students),,2,1,1,FALSE
+174,GE 1412,Introductory Thai Usage (for Thai students from international program),,2,1,1,FALSE
+175,ELE 1002,Communicative English II,,3,1,2,FALSE
+176,BG 1205,Calculus II,"Space vectors, matrices and determinants, linear analytic geometry, differential calculus of multivariable functions, vector analysis, linear integrals, surface integral and volume integrals.",3,1,2,FALSE
+177,BG 1213,Physics II,Elements of electromagnetism; alternating current (A. C.) circuits; fundamental electronics; optics; modern physics.,3,1,2,FALSE
+178,BG 1214,Physics Laboratory II,Experiments to be done according to BG 1213 Physics II,1,1,2,FALSE
+179,CE 2102,Data Structures and Algorithms,"Various type of data structures, e.g., array, string, stack, queue, dequeue, tree, binary tree, B-tree, AVL – tree; data searching and sorting, storage allocation; coding; table handling.",3,1,2,FALSE
+180,CE 2703,Introduction to Computer Systems,"Digital computer organization, memory unit, input-output device units, A/D conversion, D/A conversion, computer interface, procedure control, multiutilization, multiprogramming, multiprocessing, on-line computer systems, processing program, system design.",3,1,2,FALSE
+181,ME 1113,Engineering Drawing,"Descriptive geometry, orthographic, isometric and oblique drawings, drawing of mechanical parts, detailed drawing and assembly drawings, allowable tolerance, and surface details, applied geometry, dimensions and notes, orthographic projections, working drawing, auxiliary views, true length, grade and bearings of a line, true shape of a plane surface, perspective, sectional and developed drawings.",3,1,2,FALSE
+182,ELE 2000,Academic English,,3,2,1,FALSE
+183,BBA 1004,Essential Marketing for Entrepreneurs,,2,2,1,FALSE
+184,BG 2207,Engineering Mathematics,"First-order and higher-order ordinary differential equations, difference equations, functions of complex variable and their applications in engineering.",3,2,1,FALSE
+185,CE 2103,Object-Oriented Programming,"Object-oriented software coding paradigm and implementation through hands on experience using a cross platform compiler. Basic syntax, data structures, operators, loops, functions, arrays, strings, pointers. Class design, Object instances, data encapsulation (public, private, protected), operator overloading, pass by reference/value, use of inheritance and interfaces, using polymorphism with up/down casting, applying abstraction in the design process separating code into interface and implementation.",3,2,1,FALSE
+186,EE 2201,Electric Circuits,"Circuit elements, node and mesh analysis, circuit theorems, resistance, inductance, and capacitance, first and second o der circuits, phasor diagram, AC power circuits, three- phase systems.",3,2,1,FALSE
+187,EE 2202,Electric Circuits Laboratory,Laboratory works to be done according to EE 2201 Electric Circuits.,1,2,1,FALSE
+188,EE 2605,Engineering Electronics,"Semiconductor devices; current-voltage and frequency characteristics; analysis and design of diode circuits; analysis and design of BJT, MOS, CMOS and BiCMOS transistor circuits, operational amplifier and its applications, power supply module.",3,2,1,FALSE
+189,EE 2606,Engineering Electronics Laboratory,Laboratory works to be done according to EE 2605 Engineering Electronics.,1,2,1,FALSE
+190,ELE 2001,Advanced Academic English,,3,2,2,FALSE
+191,BBA 1005,Essential Finance for Entrepreneurs,,2,2,2,FALSE
+192,BBA 1006,Essential Economics for Entrepreneurs,,2,2,2,FALSE
+193,BG 2212,Applied Statistics,"Sets and probability, random variables, probability distribution, continuous and discrete models, parameters approximation, reliability range, hypothesis tests, regression and linear correlation.",3,2,2,FALSE
+194,CE 2104,Software Design and Development,"Software design principles and practices; design patterns; software reuse; testing; event driven programming 
+and concurrency; graphical user interface design and development; Team development. ",3,2,2,FALSE
+195,CE 2704,Digital Logic Design," Number system; logic combination: logic systems and Boolean algebra, comparator; Karnaugh map, 
+tabulation method; combination logic circuit: adder, subtract, multiple output circuits, encoder, decoder, 
+multiplexer, demultiplexer, ROMD, sequential circuits: synchronous and asynchronous circuits, flip-flops
+ counter circuits, registers. ",3,2,2,FALSE
+196,CE 2705,Digital Logic Design Laboratory,"Experiments on the designs of Gate, digital and switching circuits; interconnection of logic modules, counter, control circuits, arithmetic units, memories and small computer circuits.",1,2,2,FALSE
+197,GE 1303,Science for Sustainable Future,"General science, scientificapproaches, understanding the interrelationships of the nature, identification and analysis of environmental problems, application and alternative solutions for preventing and solving the environmental problems.",2,2,2,FALSE
+198,BBA 1007,Data Analytics for Entrepreneurs,,3,3,1,FALSE
+199,CE 2709,Computer Architecture,"Architecture of a general-purpose computer, design methodology, basic concepts of computer control, memory hierarchies, input-output organization, advanced computer architecture.",3,3,1,FALSE
+200,CE 3103,Computer Operating Systems,"Components and types of operating systems, command interpreter, management of main storage, file storage, data management, I/O management, device management; resource protecting; freestanding systems, disk operating systems, real-time operating systems, multiprocessor operating systems.",3,3,1,FALSE
+201,CE 3109,Database Management Systems,"Models and theories of database design: hierarchical, network, and relational/non-relational models; data description languages and relational query languages; query facilities, data integrity and file security; related database technologies such as XML, JSON, and noSQL databases.",3,3,1,FALSE
+202,CE 4221,Network Applications and Technology,"Internet/Intranet technologies, Web technologies, protocols, and applications including HTML, JavaScripts, modern scripting languages OGL, Java, Web Services, REST, XML, JSON, relational and nonrelational databases, security, Internet engineering effort, parameters of the technical Internet/ Intranet environment, contributing technologies of today’s Internet/Intranet, emerging Internet’s applications and technologies.",3,3,1,FALSE
+203,EE 3705,Microprocessors and Microcontrollers,"Fundamental of microprocessors and microcontrollers : architecture, hardware, software, and interfacing.",3,3,1,FALSE
+204,CE 3104,Software Engineering,Software design techniques; problem definition; function design; modular program; program design; hierarchy input and output process; detailed design; decision tables; pseudo code; debugging test data; software reliability; software maintenance; design and development of large scale software.,3,3,2,FALSE
+205,CE 4224,Telecommunication Network Laboratory,"Setup and test LAN network (Ethernet), install and setup the Network Operating System, window NT, Novell NetWare, and UNIX, including network management system, network printer, filetransfer etc. Setup and operate Internet Server and Client.",1,3,2,FALSE
+206,CE 3222,Computer Networks,"Introduction to data communications and networks; layered network architecture; point-to-point protocols and links; delay models in data networks; medium-access control protocols; flowcontrol; error control; local area network; switching network; routing in data networks; network security; cloud network, architecture and system; standards.",3,3,2,FALSE
+207,GE 2110,Human Civilization and Global Citizens,"Development of human society, rise and fall of civilizations, achievements and heritages of Western and Eastern civilizations since ancient times in order to understand their roots; globalization impacts on modern societies; cross-cultural society.",2,3,2,FALSE
+208,GE 2202,Ethics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life.",3,3,2,FALSE
+209,CE 4225,Computer and Network Security,"Security technique for both network and database. Cryptography technique; concept, scheme, secret key; public key, Hash algorithm, authentication and digital signature. Firewalls, World Wide Web security, and Internet security protocol are discussed in details in both theory and practice.",3,4,1,FALSE
+210,CE 4715,Artificial Intelligence I,"Intelligent Agents, Problem solving by searching, DFS, BFS, A* search, Greedy search, proposition logic, firstorder logic, forward chaining backward chaining, basic probability and Bayesian logic, Fuzzy logic, Decision networks, learning: Supervised learning, theory of learning, neural networks, support vector machines, machine language translation and visual perception.",3,4,1,FALSE
+211,CE 4901,Computer Engineering Project I,,1,4,1,FALSE
+212,CE 4902,Computer Engineering Project II,,2,4,2,FALSE
+213,ELE 1001,Communicative English I,,3,1,1,FALSE
+214,BG 1204,Calculus I,"Function, limits, continuity, differentiation, integration, introduction of numerical computation, surface integration, Fourier series .",3,1,1,FALSE
+215,BG 1211,Physics I,"Mechanics of particles and rigid bodies, properties of matter, fluid mechanics, heat, vibrations, and waves .",3,1,1,FALSE
+216,BG 1212,Physics Laboratory I,Experiments to be done according to BG 1211 Physics I .,1,1,1,FALSE
+217,BG 1221,Computer Programming,"Computer concepts, hardware and software interaction, current programming language, programming practices .",3,1,1,FALSE
+218,ME 1113,Engineering Drawing,"Descriptive geometry, orthographic, isometric and oblique drawings, drawing of mechanical parts, detailed drawing and assembly drawings, allowable tolerance, and surface details, applied geometry, dimensions and notes, orthographic projections, working drawing, auxiliary views, true length, grade and bearings of a line, true shape of a plane surface, perspective, sectional and developed drawings.",3,1,1,FALSE
+219,ME 1114,Engineering Workshop,"Workshop on the use of the machine tools such as a lathe or milling machine, cutting tools, and drilling tools, for milling, cutting, drilling, and shaping metal materials. filing, grinding, and welding of metals. Carpentry is included. Students are required to make workpieces of metal and wood. A full report for each work is required.",1,1,1,FALSE
+220,GE 1410,Thai for Professional Communication (for Thai students),,2,1,1,FALSE
+221,GE 1411,Thai Language for Multicultural Communication (for non-Thai students),,2,1,1,FALSE
+222,GE 1412,Introductory Thai Usage (for Thai students from international program),,2,1,1,FALSE
+223,ELE 1002,Communicative English II,,3,1,2,FALSE
+224,BG 0008,General Chemistry Laboratory,Experiments to be done according to BG 1108 General Chemistry,1,1,2,FALSE
+225,BG 1108,General Chemistry,"Stoichiometry and basis of the atomic theory; properties of gas, liquid, solid and solution; chemical equilibrium; ionic equilibrium; chemical kinetic; electronic structures of atoms; chemical bonds; periodic properties; representative elements; nonmetal and transition metals.",3,1,2,FALSE
+226,BG 1205,Calculus II,"Space vectors, matrices and determinants, linear analytic geometry, differential calculus of multivariable functions, vector analysis, linear integrals, surface integral and volume integrals.",3,1,2,FALSE
+227,BG 1213,Physics II,Elements of electromagnetism; alternating current (A. C.) circuits; fundamental electronics; optics; modern physics.,3,1,2,FALSE
+228,BG 1214,Physics Laboratory II,Experiments to be done according to BG 1213 Physics II,1,1,2,FALSE
+229,BG 2208,Discrete Mathematics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life.",3,1,2,FALSE
+230,IE 1110,Engineering Materials,"Study of relationship between structures, properties, production processes and applications of main groups of engineering materials i.e. metals, polymers, ceramics and composites, phase equilibrium diagrams and their interpretation, mechanical properties and materials degradation.",3,1,2,FALSE
+231,ELE 2000,Academic English,,3,2,1,FALSE
+232,BG 2212,Applied Statistics,"Sets and probability, random variables, probability distribution, continuous and discrete models, parameters approximation, reliability range, hypothesis tests, regression and linear correlation.",3,2,1,FALSE
+233,CE 2704,Digital Logic Design," Number system; logic combination: logic systems and Boolean algebra, comparator; Karnaugh map, 
+tabulation method; combination logic circuit: adder, subtract, multiple output circuits, encoder, decoder, 
+multiplexer, demultiplexer, ROMD, sequential circuits: synchronous and asynchronous circuits, flip-flops
+ counter circuits, registers. ",3,2,1,FALSE
+234,CE 2705,Digital Logic Design Laboratory,"Experiments on the designs of Gate, digital and switching circuits; interconnection of logic modules, counter, control circuits, arithmetic units, memories and small computer circuits.",1,2,1,FALSE
+235,EE 2201,Electric Circuits,"Circuit elements, node and mesh analysis, circuit theorems, resistance, inductance, and capacitance, first and second o der circuits, phasor diagram, AC power circuits, three- phase systems.",3,2,1,FALSE
+236,EE 2202,Electric Circuits Laboratory,Laboratory works to be done according to EE 2201 Electric Circuits.,1,2,1,FALSE
+237,MCE 2101,Fundamentals of Mechatronics Engineering,"Introduction to Mechatronics and the interaction between mechanical actuation and electronic control,
+early design evolution, evolution of engineering design, using of sensors in the system, case studies: simple
+subsystem integration; modern technologies, control, sensors, power supplies and controlled drives,
+Programmable Logic Control (PLC) as a controller for Mechatronics system, The need for a systems
+approach to Engineering Design, Control and Embedded Intelligence or PLC. ",3,2,1,FALSE
+238,MCE 2102,Mechatronics Engineering Laboratory I,"Experiments covering basic sensors such as inductive, capacitive, magnetic, photoelectric and ultra sonic. Programmable Logic Controllers is introduced and experimental covering Ladder (LD), Structure Text (ST), Function Block Diagram (FBD) and Sequential Flow Chart (SFC) languages.",1,2,1,FALSE
+239,ME 2211,Engineering Mechanics I,"Force systems, resultant, equilibrium, fluid statics, kinematics and kinetics of particles and rigid bodies, Newton’s second law of motion, work and energy, impulse and momentum.",3,2,1,FALSE
+240,ELE 2001,Advanced Academic English,,3,2,2,FALSE
+241,CE 2102,Data Structures and Algorithms,"Various type of data structures, e.g., array, string, stack, queue, dequeue, tree, binary tree, B-tree, AVL – tree; data searching and sorting, storage allocation; coding; table handling.",3,2,2,FALSE
+242,BG 2207,Engineering Mathematics,"First-order and higher-order ordinary differential equations, difference equations, functions of complex variable and their applications in engineering.",3,2,2,FALSE
+243,EE 2410,Electrical Machine Systems,Magnetic circuits; principles of electromechanical energy conversion; energy and coenergy in magnetic circuits; single phase and three phase transformers; principles of rotating machines; DC machines; AC machines construction; synchronous machines; single phase and three phase induction machines; protection of machines.,3,2,2,FALSE
+244,EE 2411,Electrical Machine Systems Laboratory,Laboratory works to be done according to EE 3402 Electrical Machines.,1,2,2,FALSE
+245,EE 2605,Engineering Electronics,"Semiconductor devices; current-voltage and frequency characteristics; analysis and design of diode circuits; analysis and design of BJT, MOS, CMOS and BiCMOS transistor circuits, operational amplifier and its applications, power supply module.",3,2,2,FALSE
+246,EE 2606,Engineering Electronics Laboratory,Laboratory works to be done according to EE 2605 Engineering Electronics.,1,2,2,FALSE
+247,ME 2220,Engineering Mechanics II,"Structure analysis; principle of virtual work; stability; kinematics of rigid body; plane motion of rigid bodies 
+(forces and accelerations, energy and momentum method); mechanical vibrations",3,2,2,FALSE
+248,BBA 1004,Essential Marketing for Entrepreneurs,,2,3,1,FALSE
+249,BBA 1005,Essential Finance for Entrepreneurs,,2,3,1,FALSE
+250,BBA 1006,Essential Economics for Entrepreneurs,,2,3,1,FALSE
+251,CE 4715,Artificial Intelligence I,"Intelligent Agents, Problem solving by searching, DFS, BFS, A* search, Greedy search, proposition logic, firstorder logic, forward chaining backward chaining, basic probability and Bayesian logic, Fuzzy logic, Decision networks, learning: Supervised learning, theory of learning, neural networks, support vector machines, machine language translation and visual perception.",3,3,1,FALSE
+252,EE 3705,Microprocessors and Microcontrollers,"Fundamental of microprocessors and microcontrollers : architecture, hardware, software, and interfacing.",3,3,1,FALSE
+253,ME 3120,Mechanics of Machinery,"Velocity and acceleration analysis; kinematics and dynamics force analysis of mechanical devices, linkages, gear trains and mechanical systems; balancing of rotating and reciprocating mass.",3,3,1,FALSE
+254,ME 3311,Pneumatic and Hydraulic Systems,"Fundamentals of Fluid Mechanics, fluidproperties, Pascal’s law, flowgoverning equations (continuity equation, conservation of energy or Bernoulli’s equation, Torricelli’s equation), basic flow in pipes, pumps, pipe design and selection, hydraulics design and analysis, pneumatic systems, compressors, receivers, valves, flow though orifices",3,3,1,FALSE
+255,ME 3312,Pneumatic and Hydraulic Laboratory,Laboratory works to be done according to ME 3311 Pneumatic and Hydraulic Systems,1,3,1,FALSE
+256,BBA 1007,Data Analytics for Entrepreneurs,,3,3,2,FALSE
+257,CE 4716,Artificial Intelligence II,,3,3,2,FALSE
+258,EE 3406,Control Systems,"Fundamental concepts associated with the fieldof maritime robotics, maritime robots used for 
+oceanography, offshore exploitation and disaster response. study of vehicle design, mapping, path 
+planning, navigation, and collision avoidance. ",3,3,2,FALSE
+259,GE 2110,Human Civilizations and Global Citizens,"Development of human society, rise and fall of civilizations, achievements and heritages of Western and Eastern civilizations since ancient times in order to understand their roots; globalization impacts on modern societies; cross-cultural society.",2,3,2,FALSE
+260,ME 3110,Mechanics of Materials,"Forces and stresses; stresses and strains relationship; stresses in  beams, shear force and bending moment 
+diagrams; deflectionof  beams, torsion; buckling of columns; Mohr’s circle and combined  stresses; failure 
+criterion. ",3,3,2,FALSE
+261,GE 2202,Ethics,"Teachings of major world religions, the role of conscience, self-development in the moral arena, building self-esteem, self-knowledge, and good habits, distinguishing the right from the wrong, doing the right and refraining from the wrong, attaining a more fulfilling life.",3,4,1,FALSE
+262,MCE 4101,Introduction to Robotics,"Introduction to Robotic systems, spatial descriptions, Kinematics, Jacobians, Robot dynamics, Trajectory generation, Position and force control, Image processing and analysis.",3,4,1,FALSE
+263,MCE 4103,Mechatronics Engineering Laboratory II,"Experiments covering modular Mechatronics system (mMs). In these stations, PLC is used to control the sequential operation including sensors and actuators. Control methods: On-Off, Three-modes, P, PI, PID are studies along with temperature process control experiment.",1,4,1,FALSE
+264,MCE 4911,Mechatronics Engineering and Artificial Intelligence Project I,,1,4,1,FALSE
+265,GE 1303,Science for Sustainable Future,"General science, scientificapproaches, understanding the interrelationships of the nature, identification and analysis of environmental problems, application and alternative solutions for preventing and solving the environmental problems.",2,4,2,FALSE
+266,MCE 4104,Automation Technology 4.0,,3,4,2,FALSE
+267,MCE 4201,Advanced Robotics and Control,,3,4,2,FALSE
+268,MCE 4912,Mechatronics Engineering and Artificial Intelligence Project II,,2,4,2,FALSE
+269,AE 2402,English for Aviation,,3,,,TRUE
+270,AE 2501,Maintenance English I,,1,,,TRUE
+271,AE 2502,Maintenance English II,,1,,,TRUE
+272,AE 3401,Avionics,,3,,,TRUE
+273,AE 4700,Commercial Pilot License Instructor,,3,,,TRUE
+274,AE 4701,Commercial Pilot License Instructor: Flight I,,2,,,TRUE
+275,AE 4702,Commercial Pilot License Instructor: Flight II,,2,,,TRUE
+276,AE 4904,Special Problems in Aeronautic Engineering I,,3,,,TRUE
+277,AE 4905,Special Problems in Aeronautic Engineering II,,2,,,TRUE
+278,AE 4906,Special Problems in Aeronautic Engineering III,,1,,,TRUE
+279,AE 4930,Advanced Topics in Aeronautic Engineering I,,3,,,TRUE
+280,AE 4931,Advanced Topics in Aeronautic Engineering II,,2,,,TRUE
+281,AE 4932,Advanced Topics in Aeronautic Engineering III,,1,,,TRUE
+282,CE 2703,Introduction to Computer Systems,,3,,,TRUE
+283,CE 2704,Digital Logic Design,,3,,,TRUE
+284,CE 2705,Digital Logic Design Laboratory,,1,,,TRUE
+285,CE 4227,Mobile and Wireless Networks,,3,,,TRUE
+286,EE 2401,Electromechanical Energy Conversion,,3,,,TRUE
+287,EE 2402,Electromechanical Energy Conversion Laboratory,,1,,,TRUE
+288,EE 3301,Electromagnetic Fields,,3,,,TRUE
+289,EE 3404,Feedback Control Systems,,3,,,TRUE
+290,EE 3601,Electronic Circuit Design,,3,,,TRUE
+291,EE 3602,Electronic Circuit Design Laboratory,,1,,,TRUE
+292,EE 4305,Digital Signal Processing,,3,,,TRUE
+293,EE 4403,Basic Mechatronics,,3,,,TRUE
+294,EE 4503,Electrical Systems Design,,3,,,TRUE
+295,EE 4602,Industrial Instrumentation and Control,,3,,,TRUE
+296,TE 4201,Communication Electronics,,3,,,TRUE
+297,TE 4202,Communication Electronics Laboratory,,1,,,TRUE
+298,AE 2402,English for Aviation,,3,,,TRUE
+299,AE 2501,Maintenance English I,,1,,,TRUE
+300,AE 2502,Maintenance English II,,1,,,TRUE
+301,AE 3401,Avionics,,3,,,TRUE
+302,AE 4700,Commercial Pilot License Instructor,,3,,,TRUE
+303,AE 4701,Commercial Pilot License Instructor: Flight I,,2,,,TRUE
+304,AE 4702,Commercial Pilot License Instructor: Flight II,,2,,,TRUE
+305,AE 4904,Special Problems in Aeronautic Engineering I,,3,,,TRUE
+306,AE 4905,Special Problems in Aeronautic Engineering II,,2,,,TRUE
+307,AE 4906,Special Problems in Aeronautic Engineering III,,1,,,TRUE
+308,AE 4930,Advanced Topics in Aeronautic Engineering I,,3,,,TRUE
+309,AE 4931,Advanced Topics in Aeronautic Engineering II,,2,,,TRUE
+310,AE 4932,Advanced Topics in Aeronautic Engineering III,,1,,,TRUE
+311,CE 2703,Introduction to Computer Systems,,3,,,TRUE
+312,CE 2704,Digital Logic Design,,3,,,TRUE
+313,CE 2705,Digital Logic Design Laboratory,,1,,,TRUE
+314,CE 4227,Mobile and Wireless Networks,,3,,,TRUE
+315,EE 2401,Electromechanical Energy Conversion,,3,,,TRUE
+316,EE 2402,Electromechanical Energy Conversion Laboratory,,1,,,TRUE
+317,EE 3301,Electromagnetic Fields,,3,,,TRUE
+318,EE 3404,Feedback Control Systems,,3,,,TRUE
+319,EE 3601,Electronic Circuit Design,,3,,,TRUE
+320,EE 3602,Electronic Circuit Design Laboratory,,1,,,TRUE
+321,EE 4305,Digital Signal Processing,,3,,,TRUE
+322,EE 4403,Basic Mechatronics,,3,,,TRUE
+323,EE 4503,Electrical Systems Design,,3,,,TRUE
+324,EE 4602,Industrial Instrumentation and Control,,3,,,TRUE
+325,TE 4201,Communication Electronics,,3,,,TRUE
+326,TE 4202,Communication Electronics Laboratory,,1,,,TRUE
+327,EE 3601,Electronic Circuit Design,,3,,,TRUE
+328,EE 3602,Electronic Circuit Design Laboratory,,1,,,TRUE
+329,EE 4403,Basic Mechatronics,,-,,,TRUE
+330,MCE 3220,Fundamentals of Electric Vehicles,,3,,,TRUE
+331,MCE 4104,Automation Technology 4.0,,3,,,TRUE
+332,CE 3003,Mobile Applications Development,,3,,,TRUE
+333,CE 3106,Programming Languages,,3,,,TRUE
+334,CE 3111,Design and Analysis of Algorithms,,3,,,TRUE
+335,CE 4201,Image Processing and Computer Vision,,3,,,TRUE
+336,CE 4207,System and Network Programming,,3,,,TRUE
+337,CE 4223,Advanced Computer Networks,,3,,,TRUE
+338,CE 4226,Network Systems Analysis and Design,,3,,,TRUE
+339,CE 4227,Mobile and Wireless Networks,,3,,,TRUE
+340,CE 4310,Introduction to Financial Technology,,3,,,TRUE
+341,EE 4305,Digital Signal Processing,,3,,,TRUE
+342,TE 3102,Communication Networks and Transmission Lines,,3,,,TRUE
+343,TE 3301,Radio Wave Propagation,,3,,,TRUE
+344,TE 4111,Antenna Engineering,,3,,,TRUE
+345,TE 4112,Optical Communications,,3,,,TRUE
+346,TE 4113,Digital Communications,,3,,,TRUE
+347,TE 4201,Communication Electronics,,3,,,TRUE
+348,TE 4202,Communication Electronics Laboratory,,1,,,TRUE
+349,TE 4301,Principle of Telecommunications Policies,,3,,,TRUE
+350,CE 4114,Data Mining,,3,,,TRUE
+351,CE 4115,Fundamentals of Machine Learning,,3,,,TRUE
+352,CE 4229,Introduction to Cloud Computing,,3,,,TRUE
+353,CE 4301,Fundamental of Internet of Things,,3,,,TRUE
+354,CE 4303,Introduction to Big-Data,,3,,,TRUE
+355,CE 4304,Programming for Data Analytics,,3,,,TRUE
+356,CE 4716,Artificial Intelligence II,,3,,,TRUE
+357,EE 3704,Embedded Systems,,3,,,TRUE
+358,CE 3901,Digital Audio/Video Coding Technique,,3,,,TRUE
+359,CE 4801,Computer Graphics Programming,,3,,,TRUE
+360,CE 4802,Fundamentals of Virtual Reality,,3,,,TRUE
+361,CE 4803,Fundamentals of Game Development,,3,,,TRUE
+362,CE 4804,Introduction to GPU Computing,,3,,,TRUE
+363,CE 4810,Advanced Topics in Game Development,,3,,,TRUE
+364,CE 4811,Special Problems in Game Development,,3,,,TRUE
+365,CDI 3211,Game Design,,3,,,TRUE
+366,GDC 3107,User Interface Design,,3,,,TRUE
+367,BEN 3303,Entrepreneurial Leadership,,3,,,TRUE
+368,BEN 3304,Project Management,,3,,,TRUE
+369,BEN 4213,Digital Entrepreneurship,,3,,,TRUE
+370,BEN 4315,Family Business Management,,3,,,TRUE
+371,CE 4108,Operations Research,,3,,,TRUE
+372,CE 4109,Information Systems Analysis and Design,,3,,,TRUE
+373,IE 4201,Engineering Management,,3,,,TRUE
+374,IE 4203,Engineering Economics,,3,,,TRUE
+375,CE 4903,Advanced Topics in Computer Engineering,,3,,,TRUE
+376,CE 4904,Special Problems in Computer Engineering,,3,,,TRUE
+377,CE 4907,Computer Engineering Industrial Training,,3,,,TRUE
+378,EE 4903,Advanced Topics in Electrical and/or Electronic Engineering,,3,,,TRUE
+379,EE 4904,Special Problems in Electrical and/or Electronic Engineering,,3,,,TRUE
+380,EE 4907,Electrical Engineering Industrial Training,,3,,,TRUE
+381,CE 3105,Microprocessor Programming Using Assembly & C,"Computer architecture, operation and instruction; programming languages; assembly language programming; arithmetic programs; loops and arrays; mnemonic operations; subroutines; characteristic and operation of assemblers, interfacing assembly with the high-level language (C language), using C to interact with hardware.",3,,,TRUE
+382,CE 3106,Programming Languages,Definitionof language including specificationof syntax and semantics; programming techniques of selected modern languages; language structures; data types; run-time environment.,3,,,TRUE
+383,CE 3111,Design and Analysis of Algorithms,"Techniques of design and analysis of algorithms for internal and external sorting, searching and margins; NP-hard problems.",3,,,TRUE
+384,CE 3707,Microprocessor Systems Design,"Microprocessor architecture; control unit; memory; input-output units; microprocessor construction; registers; index and stack pointers; addressing modes; interfacing techniques (RAM, ROM, …); micro processor programming.",1,,,TRUE
+385,CE 4110,Compilers,"Programming language structures; compiling systems, lexical analysis, syntax and semantics analysis, parsors, symbol table, error diagnostics and recovery, code generation, examples of typical compilers.",3,,,TRUE
+386,CE 4201,Image Processing and Computer Vision,"Introduction to digital image processing including such topics as digital image representation, analysis of images represented in different formats, edge detection, image segmentation, object recognition, motion analysis.",3,,,TRUE
+387,CE 4713,Advanced Computer Architecture,"Microcomputer, minicomputer and mainframe architectures; computer systems organizations pipeline processors, stack, multi-processors.",3,,,TRUE
+388,CE 4714,Fault-Tolerant Computer,Maintainable and diagnosable design techniques; test generation algorithms; Boolean difference; simulation for design verification; self-checking logic circuits; error detection and correction codes; redundancy techniques; design of simplified testing,3,,,TRUE
+389,CE 4903,Advanced Topics in Computer Engineering,Topic of current interest and new developments on computer engineering.,3,,,TRUE
+390,CE 4904,Special Problems in Computer Engineering,Investigation of special problems assigned by the instructor with the consent of the Faculty; a written report is required.,3,,,TRUE
+391,EE 4305,Digital Signal Processing,"Continuous-time and discrete-time signals, spectral analysis; decimation and interpolation; sampling rate conversion; DFT; probabilistic methods in DSP; design of FIR, IIR digital filters,multirate systems and filterBanks; Discrete Wavelet Transform; introduction to some DSP applications such as image processing, speech and audio processing, array processing and further current applications.",3,,,TRUE
+392,CE 3901,Digital Audio/Video Coding Technique,Basics technique of audio/video encoding.,3,,,TRUE
+393,CE 4002,Introduction to Broadcasting Technology,"Current technology using in the broadcasting technology e.g. Broadcasts protocol, video editing technology.",3,,,TRUE
+394,CE 4207,System and Network Programming,"Syntax and semantics of C++ applied to object oriented programming concept of abstract data type, classes, data hiding, polymorphism and inheritance. General introduction to UNIX operating system and UNIX file system, and use of UNIX system calls in C++",3,,,TRUE
+395,CE 4223,Advanced Computer Networks,"Hardware and software organization for computer communication networks, using the 7-layer Open System Interconnection Reference Model and IP protocol suite as a basis for study, typical designs for computer network protocols from the hardware through the communications software and application software levels, using LAN, TCP/IP and OSI protocols as examples including internetworking concept and technology.",3,,,TRUE
+396,CE 4226,Network Systems Analysis and Design,"Analysis and design of networks; methods to analyze the existing networks, redesign the existing network or design and evaluate the network; queuing theory, trafficanalysis, security, reliability, availability and flexibility",3,,,TRUE
+397,CE 4227,Mobile and Wireless Networks,"Wireless communication system; theory, principle of mobile communication system; characteristic and impact of radio propagation; modulation techniques; speech coding; diversity channel coding; multiplexing technique; interconnection components for mobile communication system; standards of current mobile communication, 3G, 4G, 5G and beyond; cellular systems: multiple access and interference management, capacity of wireless channels, multiuser capacity; MIMO system; wireless data networks with an emphasis on protocols above the physical layer.",3,,,TRUE
+398,TE 4112,Optical Communications,"Cylindrical dielectric waveguides and propagating conditions; structure and types of optical fiber;optical fiberparameters; optical fiberproduction; optical cable types; optical transmitters; optical receivers; signal degradations, attenuation and dispersion in fiber link; optical repeaters and amplifiers; link budget calculation; multiplexing in optical link system; introduction to FTTX.",3,,,TRUE
+399,TE 4204,Optoelectronics,"Units of light measurement, optical fibe, wave guide, light sources, and semiconductor light detector, liquid crystal, optical transmission and reception, optical integrated circuits.",3,,,TRUE
+400,TE 4301,Principle of Telecommunications Policies,"This course introduces fundamental of information and communications policies and regulations governing services such as Internet services, broadband applications, telephone, mobile, cable, and wireless and spectrum management. Students will learn key issues, principles, and practices in policy development emphasizing the intersection of technology, economics, and public policy.",3,,,TRUE
+401,CE 4114,Data Mining,Fundamental concepts of data mining; data mining methodologies; classification;association rules; clustering.,3,,,TRUE
+402,CE 4229,Introduction to Cloud Computing,"Introduce the concepts of Cloud Computing as new computing paradigm. The course will expose students with various terminology, principles, and applications. Also, students will learn technological aspects of distributed systems and databases, virtualization, data parallelism, performance analysis, cloud services, networking, and security.",3,,,TRUE
+403,CE 4301,Fundamental of Internet of Things,Introduction to the Internet of Things (IoT) including microcontroller or microprocessor based systems that can control physical world; key components of IoT and networking; full stack software development; IoT design considerations and constraints; interfacing between devices and physical world.,3,,,TRUE
+404,CE 4302,Introduction to Big-Data,"Big data analysis, tools, and techniques; Management of structured and unstructured data; Processing and Querying large data sets.",1,,,TRUE
+405,EE 3704,Embedded Systems,"Architecture, features and instruction sets of microcontrollers and DSP processors, interfacing techniques, requirements of power applications, external memory, peripherals, timers, DAC and ADC, sampling and real time considerations, programming, data acquisition. Introduction and development of micro-electro mechanical (MEMS) technology.",3,,,TRUE
+406,EE 4403,Basic Mechatronics,Introduction to mechatronics with emphasis on PLC or industrial robots that used in automated manufacturing. Basic knowledge of Pneumatic and Hydraulic equipments will be overviewed.,3,,,TRUE
+407,EE 4602,Industrial Instrumentation and Control,"Analog and digital equipment and measuring instruments; various types of transducers, data processing and displays; study of techniques of system control in industry in order to be able to do some analysis, design, equipment selection and maintenance for the control system in industry.",3,,,TRUE
+408,MCE 4102,Introduction to Industrial Automation,"PLC, instrumentation, sensors and actuators in manufacturing automation, signal conditioning, computer based control systems, PLC networking systems.",3,,,TRUE
+409,CE 4108,Operations Research,"Scientificmethods of operations research, linear programming, dynamic programming, game theory, queuing theory, simulation, and applications of these techniques to industrial operations.",3,,,TRUE
+410,CE 4109,Information Systems Analysis and Design,"Data and information; data processing system; information system design; data storage and data classification; eror detection; file and fom design, sequential, indexed, VSAM, ISAM.",3,,,TRUE
+411,CE 4907,Computer Engineering Industrial Training,Student needs to apply for internship from Company that dealing in Computer Engineering field.Student need to submit a report regarding their duty assigned to the responsible faculty.,3,,,TRUE
+412,IE 4201,Engineering Management,"Modern management principles, methods of increasing productivity, human relation, industrial safety, commercial laws, basic of engineering economy, finance, marketing, poject management.",3,,,TRUE
+413,IE 4203,Engineering Economics,"Methods of comparison, depreciation, evaluation of replacement, risk and uncertainty, estimating of income, tax consequences, processes of decision making for investment of challenging projects.",3,,,TRUE
+414,CE 3001,Commercial Application Programming,,3,,,TRUE
+415,CE 3003,Mobile Applications Development,,3,,,TRUE
+416,CE 4221,Network Applications and Technology,,3,,,TRUE
+417,CE 4224,Telecommunication Network Laboratory,,1,,,TRUE
+418,CE 4225,Computer and Network Security,,3,,,TRUE
+419,CE 4301,Fundamental of Internet of Things,,3,,,TRUE
+420,EE 3301,Electromagnetic Fields,,3,,,TRUE
+421,EE 3704,Embedded Systems,,3,,,TRUE
+422,EE 4305,Digital Signal Processing,,3,,,TRUE
+423,EE 4501,Power System Analysis,,3,,,TRUE
+424,EE 4503,Electrical System Design,,3,,,TRUE
+425,EE 4506,High Voltage Engineering,,3,,,TRUE
+426,EE 4602,Industrial Instrumentation and Control,,3,,,TRUE
+427,EE 4603,Industrial Electronics,,3,,,TRUE
+428,EE 4701,Microprocessor Interface Techniques,,3,,,TRUE
+429,IE 2110,Introduction to Manufacturing with Plastics,,3,,,TRUE
+430,IE 4101,Manufacturing and Information Technology,,3,,,TRUE
+431,IE 4201,Engineering Management,,3,,,TRUE
+432,IE 4203,Engineering Economics,,3,,,TRUE
+433,MCE 4801,Instrument for Aviation,,6,,,TRUE
+434,MCE 4903,Advanced Topics in Mechatronics Engineering,,3,,,TRUE
+435,MCE 4904,Special Problems in Mechatronics Engineering,,3,,,TRUE
+436,MCE 4907,Engineering Internship,,3,,,TRUE
+437,ME 4010,Machine Design,,3,,,TRUE
+438,ME 4310,Mechanical Vibration,,3,,,TRUE
+439,ME 4412,Internal Combustion Engines,,3,,,TRUE
+440,ME 4414,Air Conditioning,,3,,,TRUE
+441,ME 4505,Ship Design,,3,,,TRUE
+442,ME 4602,Maritime Robotics,,3,,,TRUE
+443,TE 3000,Principles of Communications,,3,,,TRUE
